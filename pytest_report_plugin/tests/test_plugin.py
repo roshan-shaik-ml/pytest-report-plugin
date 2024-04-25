@@ -5,6 +5,7 @@ from hypothesis import strategies as st, given
 from pytest_report_plugin.plugin import ReportPlugin 
 import responses
 
+'''
 @pytest.fixture
 def report_plugin():
     # Mock the HTTP requests
@@ -18,6 +19,7 @@ def report_plugin():
         plugin = ReportPlugin(enabled=True, api_url="http://example.com", auth_token="dummy_token")
         
         yield plugin
+'''
 
 @pytest.mark.parametrize(
     "left, right",
@@ -36,4 +38,3 @@ NUMBER = st.integers() | st.floats()
 @given(left=NUMBER, right=NUMBER)
 def test_properties(left, right):
     assert left + right == right + left
-
