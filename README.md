@@ -16,12 +16,10 @@
 ```bash
 git clone https://github.com/roshan-shaik-ml/pytest-report-plugin.git
 ```
-To install the required dependencies, download the requirements.txt file from the repository:
-
+To install the required dependencies, navigate to the requirements.txt file in the repository.
 ```bash
-wget https://raw.githubusercontent.com/roshan-shaik-ml/pytest-report-plugin/main/requirements.txt
+cd pytest-report-plugin
 ```
-
 Then install the dependencies:
 ```bash
 pip install -r requirements.txt
