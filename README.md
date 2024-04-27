@@ -7,6 +7,7 @@
 ## Features
 
 - Report test execution progress and results during test runs.
+- Provide runtime logging for easy debugging.
 - Seamlessly integrates with pytest.
 - Provides detailed information about test execution.
 - Supports custom configuration options for reporting.
