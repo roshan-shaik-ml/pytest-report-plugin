@@ -38,12 +38,10 @@ class ReportPlugin:
 
     @pytest.hookimpl(tryfirst=True)
     def pytest_runtest_setup(self, item: Item):
-
         """
         Hook function called before each test setup.
         Starts a new test if reporting is enabled.
         """
-
         # reporting enabled 
         if self.enabled:
 
@@ -64,7 +62,6 @@ class ReportPlugin:
         Hook function called when reporting test status.
         Reports the status of each test.
         """
-
         # reporting the test status
         duration = None
         test_status = None
@@ -90,7 +87,6 @@ class ReportPlugin:
         
     @pytest.hookimpl(tryfirst=True)
     def pytest_sessionfinish(self):
-        
         """
         Hook function called at the end of the test session.
         Finishes the test run if reporting is enabled.
