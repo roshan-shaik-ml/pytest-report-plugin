@@ -13,8 +13,6 @@
 
 ## Installation
 
-You can install `pytest-report-plugin` via pip:
-
 ```bash
 pip install pytest-report-plugin
 ```
@@ -28,22 +26,22 @@ Then install the dependencies:
 ```bash
 pip install -r requirements.txt
 ```
-Usage
+## Usage
 
 To use pytest-report-plugin, you need to enable it in your pytest configuration. You can do this by adding command-line options when running pytest:
 
 ```bash
 pytest --reporting_enabled --reporting_api_url <API_URL> --reporting_auth_token <AUTH_TOKEN>
 ```
-<b>Make sure to replace <API_URL> and <AUTH_TOKEN> with the appropriate values for your API endpoint and authentication token.</b>
+Make sure to replace <API_URL> and <AUTH_TOKEN> with the appropriate values for your API endpoint and authentication token.
 
-Contributing
+##Contributing
 
 Contributions are welcome! For bug reports or feature requests, please open an issue. For contributions, please follow the contribution guidelines.
-License
+##License
 
 This project is licensed under the terms of the MIT license. See the LICENSE file for details.
-Credits
+##Credits
 
 This plugin was developed by Shaik Faizan Roshan Ali.
 
