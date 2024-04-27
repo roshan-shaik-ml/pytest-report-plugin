@@ -35,15 +35,14 @@ pytest --reporting_enabled --reporting_api_url <API_URL> --reporting_auth_token 
 ```
 Make sure to replace <API_URL> and <AUTH_TOKEN> with the appropriate values for your API endpoint and authentication token.
 
-##Contributing
+## Contributing
 
 Contributions are welcome! For bug reports or feature requests, please open an issue. For contributions, please follow the contribution guidelines.
-##License
+## License
 
 This project is licensed under the terms of the MIT license. See the LICENSE file for details.
-##Credits
+## Credits
 
 This plugin was developed by Shaik Faizan Roshan Ali.
 
-css
 Feel free to modify and customize it according to your preferences and specific
