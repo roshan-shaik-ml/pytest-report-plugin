@@ -1,7 +1,5 @@
 # pytest-report-plugin
 
-[![GitHub license](https://img.shields.io/github/license/roshan-shaik-ml/pytest-report-plugin)](https://github.com/roshan-shaik-ml/pytest-report-plugin/blob/main/LICENSE)
-
 ## Description
 
 **pytest-report-plugin** is a pytest plugin for reporting test execution progress and results to an external API.
@@ -22,25 +20,22 @@ pip install pytest-report-plugin
 ```
 To install the required dependencies, download the requirements.txt file from the repository:
 
-```
-bash
+```bash
 wget https://raw.githubusercontent.com/roshan-shaik-ml/pytest-report-plugin/main/requirements.txt
 ```
 
 Then install the dependencies:
-```
-bash
+```bash
 pip install -r requirements.txt
 ```
 Usage
 
 To use pytest-report-plugin, you need to enable it in your pytest configuration. You can do this by adding command-line options when running pytest:
 
-bash
-
+```bash
 pytest --reporting_enabled --reporting_api_url <API_URL> --reporting_auth_token <AUTH_TOKEN>
-
-Make sure to replace <API_URL> and <AUTH_TOKEN> with the appropriate values for your API endpoint and authentication token.
+```
+<b>Make sure to replace <API_URL> and <AUTH_TOKEN> with the appropriate values for your API endpoint and authentication token.</b>
 
 Contributing
 
