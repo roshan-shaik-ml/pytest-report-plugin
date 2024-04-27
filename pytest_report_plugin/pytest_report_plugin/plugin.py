@@ -14,6 +14,7 @@ Usage:
 """
 import uuid
 import pytest
+import logging
 import requests
 from datetime import datetime
 from typing import Union, Dict, Any
@@ -23,7 +24,14 @@ from _pytest.reports import TestReport
 from _pytest.reports import CollectReport
 
 
+# Configure logging
+logging.basicConfig(filename='test_reporting.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
+
 class ReportPlugin:
+    """
+    A pytest plugin for reporting test results to an API.
+    """
 
     def __init__(self, config: pytest.Config): 
         """
@@ -36,6 +44,7 @@ class ReportPlugin:
         self.enabled = config.getoption("reporting_enabled", False)
         self.api_url = config.getoption("reporting_api_url", "")
         self.auth_token = config.getoption("reporting_auth_token", "")
+        logger.info(f"Plugin initialized with API URL: {self.api_url}, Auth Token: {'*' * len(self.auth_token)}")
 
     @pytest.hookimpl(tryfirst=True)
     def pytest_sessionstart(self):
@@ -44,9 +53,11 @@ class ReportPlugin:
         Starts the test run if reporting is enabled.
         """
 
-        # Reporting Enabled
+        # check reporting enabled
         if self.enabled:
+
             self.run_id = self.start_test_run()
+            logger.info("Test run started")
         
         return None
 
@@ -56,7 +67,8 @@ class ReportPlugin:
         Hook function called before each test setup.
         Starts a new test if reporting is enabled.
         """
-        # reporting enabled 
+
+        # check reporting enabled
         if self.enabled:
 
             test_name = item.name
@@ -64,13 +76,14 @@ class ReportPlugin:
             timestamp = datetime.now()
             # Check if the test item has parameters
             if hasattr(item, "callspec") and hasattr(item.callspec, "params"):
-                # Access the test parameters
+                 # Access the test parameters
                 test_params = item.callspec.params
-            
-            self.test_id = self.start_test(test_name, test_params, timestamp, self.run_id)
-        
-        return None
 
+            self.test_id = self.start_test(test_name, test_params, timestamp, self.run_id)
+            logger.info(f"Test '{test_name}' started with params: {test_params}")
+
+        return None
+    
     def pytest_report_teststatus(self, report: Union[CollectReport, TestReport]):
         """
         Hook function called when reporting test status.
@@ -87,29 +100,29 @@ class ReportPlugin:
             duration = report.duration
 
             if hasattr(report.longrepr, 'reprcrash'):
-                
+
                 error_exception = str(report.longrepr.reprcrash) 
 
-            # print(f"\nStatus at call: {test_status.capitalize()}\nDuration: {duration}")
+            logger.info(f"Test status: {test_status}, Duration: {duration}")
             self.finish_test(self.test_id, test_status, error_exception, duration)
 
         if report.when == "setup" and report.outcome=="skipped":
 
             test_status = report.outcome
-            #print(f"@ Setup {report.outcome}")
+            logger.info(f"Test skipped: {report.longrepr}")
             self.finish_test(self.test_id, test_status, error_exception, duration)    
-        
+
     @pytest.hookimpl(tryfirst=True)
     def pytest_sessionfinish(self):
         """
         Hook function called at the end of the test session.
         Finishes the test run if reporting is enabled.
         """
-        # At the end of session finish
+
         if self.enabled:
 
             self.finish_test_run(self.run_id)
-            #print("Session run completed")
+            logger.info("Test run finished")
 
     def start_test_run(self) -> str:
         """
@@ -118,7 +131,7 @@ class ReportPlugin:
         Returns:
             str: The ID of the newly started test run.
         """
-        # Check if reporting is enabled
+         # Check if reporting is enabled
         if self.enabled:
             # Generate a unique run ID
             run_id = str(uuid.uuid4())
@@ -147,9 +160,6 @@ class ReportPlugin:
 
         Args:
             run_id (str): The ID of the test run.
-
-        Returns:
-            None
         """
         # Check if reporting is enabled and run ID is provided
         if self.enabled and run_id:
@@ -169,10 +179,9 @@ class ReportPlugin:
                 headers={"Authorization": f"Bearer {self.auth_token}"},
                 json=data
             )
-
         # Return None if reporting is disabled or run ID is not provided
         return None
-    
+
     def replace_nan(self, obj: Dict) -> Any:
         """
         Replace NaN values in the object with None.
@@ -187,7 +196,7 @@ class ReportPlugin:
             return {k: self.replace_nan(v) for k, v in obj.items()}
         elif isinstance(obj, list):
             return [self.replace_nan(item) for item in obj]
-        elif isinstance(obj, float) and obj != obj:  # Check for NaN
+        elif isinstance(obj, float) and obj != obj:
             return None
         else:
             return obj
@@ -209,10 +218,9 @@ class ReportPlugin:
         if self.enabled:
             # Generate a unique test ID
             test_id = str(uuid.uuid4())
-
             # Replace NaN values in the test parameters with None
             test_param = self.replace_nan(test_param)
-
+            
             # Prepare the data to be sent in the request
             data = {
                 "test_id": test_id,
@@ -229,10 +237,10 @@ class ReportPlugin:
                 headers={"Authorization": f"Bearer {self.auth_token}"},
                 json=data
             )
-
+            logger.info(f"Started test: {test_name}")
             # Return the test ID
             return test_id
-
+        
         # Return None if reporting is disabled
         return None
   
@@ -245,11 +253,10 @@ class ReportPlugin:
             test_status (str): The status of the test (e.g., 'passed', 'failed', 'skipped').
             error_exception (str, optional): Any error or exception message associated with the test. Defaults to None.
             duration (int, optional): The duration of the test in milliseconds. Defaults to None.
-        Returns:
-            None
         """
-
+        # check reporting enable and test_id isn't None
         if self.enabled and test_id:
+
             # Prepare the data to be sent in the request
             data = {
                 "test_id": test_id,
@@ -266,5 +273,7 @@ class ReportPlugin:
                 json=data
             )
 
+            logger.info(f"Finished test: {test_id}, Status: {test_status}, Exception: {error_exception}, Duration: {duration}")
+        
         # Return None if reporting is disabled or test ID is not provided
         return None
