@@ -1,25 +1,6 @@
 # tests/test_plugin.py
-
 import pytest
 from hypothesis import strategies as st, given
-from pytest_report_plugin.plugin import ReportPlugin 
-import responses
-
-'''
-@pytest.fixture
-def report_plugin():
-    # Mock the HTTP requests
-    with responses.RequestsMock() as rsps:
-        # Mock the responses for /runs/ endpoint
-        rsps.add(responses.POST, "http://example.com/runs/", json={"run_id": 123}, status=201)
-        # Mock the responses for /tests/ endpoint
-        rsps.add(responses.POST, "http://example.com/tests/", json={"test_id": 456}, status=201)
-        
-        # Create an instance of the plugin
-        plugin = ReportPlugin(enabled=True, api_url="http://example.com", auth_token="dummy_token")
-        
-        yield plugin
-'''
 
 @pytest.mark.parametrize(
     "left, right",
