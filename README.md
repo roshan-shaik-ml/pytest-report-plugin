@@ -14,7 +14,7 @@
 ## Installation
 
 ```bash
-pip install pytest-report-plugin
+git clone https://github.com/roshan-shaik-ml/pytest-report-plugin.git
 ```
 To install the required dependencies, download the requirements.txt file from the repository:
 
