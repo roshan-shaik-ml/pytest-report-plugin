@@ -31,7 +31,7 @@ pip install -r requirements.txt
 To use pytest-report-plugin, you need to enable it in your pytest configuration. You can do this by adding command-line options when running pytest:
 
 ```bash
-pytest --reporting_enabled --reporting_api_url <API_URL> --reporting_auth_token <AUTH_TOKEN>
+pytest --reporting-enabled --reporting-api-url=<API_URL> --reporting-auth-token=<AUTH_TOKEN>
 ```
 Make sure to replace <API_URL> and <AUTH_TOKEN> with the appropriate values for your API endpoint and authentication token.
 
