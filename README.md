@@ -40,9 +40,9 @@ Make sure to replace <API_URL> and <AUTH_TOKEN> with the appropriate values for 
 Contributions are welcome! For bug reports or feature requests, please open an issue. For contributions, please follow the contribution guidelines.
 ## License
 
-This project is licensed under the terms of the MIT license. See the LICENSE file for details.
+This project is licensed under the terms of the MIT license. See the [LICENSE](https://github.com/roshan-shaik-ml/pytest-report-plugin/blob/main/LICENSE) file for details.
 ## Credits
 
-This plugin was developed by Shaik Faizan Roshan Ali.
+This plugin was developed by [Shaik Faizan Roshan Ali](https://github.com/roshan-shaik-ml/).
 
 Feel free to modify and customize it according to your preferences and specific
