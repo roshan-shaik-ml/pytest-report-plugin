@@ -19,19 +19,19 @@ You can install `pytest-report-plugin` via pip:
 
 ```bash
 pip install pytest-report-plugin
-
+```
 To install the required dependencies, download the requirements.txt file from the repository:
 
+```
 bash
-
 wget https://raw.githubusercontent.com/roshan-shaik-ml/pytest-report-plugin/main/requirements.txt
+```
 
 Then install the dependencies:
-
+```
 bash
-
 pip install -r requirements.txt
-
+```
 Usage
 
 To use pytest-report-plugin, you need to enable it in your pytest configuration. You can do this by adding command-line options when running pytest:
