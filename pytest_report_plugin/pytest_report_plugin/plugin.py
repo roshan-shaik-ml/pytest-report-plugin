@@ -1,3 +1,17 @@
+"""
+File: plugin.py
+Author: Shaik Faizan Roshan Ali
+Date: April 27 2024
+Description: This module contains a pytest plugin for reporting test results to an API.
+
+Usage:
+    This plugin can be used to report test results to an external API during test execution.
+
+    To enable reporting, use the following command-line options when running pytest:
+        pytest --reporting_enabled --reporting_api_url <API_URL> --reporting_auth_token <AUTH_TOKEN>
+
+    The API URL and authentication token must be provided for reporting to work properly.
+"""
 import uuid
 import pytest
 import requests
