@@ -8,7 +8,7 @@ Usage:
     This plugin can be used to report test results to an external API during test execution.
 
     To enable reporting, use the following command-line options when running pytest:
-        pytest --reporting_enabled --reporting_api_url <API_URL> --reporting_auth_token <AUTH_TOKEN>
+        pytest --reporting-enabled --reporting-api-url=<API_URL> --reporting-auth-token=<AUTH_TOKEN>
 
     The API URL and authentication token must be provided for reporting to work properly.
 """
@@ -87,9 +87,10 @@ class ReportPlugin:
     
     @pytest.hookimpl(tryfirst=True)
     def pytest_runtest_teardown(self, item):
-
-        logger.info(f"{self.test_id} {self.test_status}")
-        self.finish_test(self.test_id, self.test_status, self.error_exception, self.duration)
+        
+        if self.enabled:
+            logger.info(f"{self.test_id} {self.test_status}")
+            self.finish_test(self.test_id, self.test_status, self.error_exception, self.duration)
 
     def pytest_report_teststatus(self, report: Union[CollectReport, TestReport]):
         """
@@ -98,26 +99,27 @@ class ReportPlugin:
 
         xfailed error are currently reported as skipped
         """
-        # reporting the test status
-        self.duration = None
-        self.test_status = "UNKNOWN"
-        self.error_exception = None
+        if self.enabled:
+            # reporting the test status
+            self.duration = None
+            self.test_status = "UNKNOWN"
+            self.error_exception = None
 
-        if report.when == "call":
+            if report.when == "call":
 
-            self.test_status = report.outcome.upper()
-            self.duration = report.duration
+                self.test_status = report.outcome.upper()
+                self.duration = report.duration
 
-            if hasattr(report.longrepr, 'reprcrash'):
+                if hasattr(report.longrepr, 'reprcrash'):
 
-                self.error_exception = str(report.longrepr.reprcrash) 
+                    self.error_exception = str(report.longrepr.reprcrash) 
 
-            logger.info(f"Test status: {self.test_status}, Duration: {self.duration}")
+                logger.info(f"Test status: {self.test_status}, Duration: {self.duration}")
 
-        if report.when == "setup" and report.outcome=="skipped":
+            if report.when == "setup" and report.outcome=="skipped":
 
-            self.test_status = report.outcome.upper()
-            logger.info(f"Test skipped: {report.longrepr}")  
+                self.test_status = report.outcome.upper()
+                logger.info(f"Test skipped: {report.longrepr}")  
 
     @pytest.hookimpl(tryfirst=True)
     def pytest_unconfigure(self, config):
