@@ -1399,3 +1399,1166 @@
 2024-04-28 18:42:41,478 - INFO - Test status: FAILED, Duration: 0.00045002399929217063
 2024-04-28 18:42:41,479 - INFO - Test status: FAILED, Duration: 0.43633109500115097
 2024-04-28 18:42:41,492 - INFO - Test run finished
+2024-04-29 01:59:49,764 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 01:59:49,793 - INFO - <Response [200]>
+2024-04-29 01:59:49,793 - INFO - 87ae6a2e-7ab5-412d-8f97-c716d655864d
+2024-04-29 01:59:49,793 - INFO - Test run started
+2024-04-29 01:59:49,911 - INFO - Started test: test_passing
+2024-04-29 01:59:49,912 - INFO - Test 'test_passing' started with params: {}
+2024-04-29 01:59:49,939 - INFO - Test status: PASSED, Duration: 0.00013429499995254446
+2024-04-29 01:59:49,939 - INFO - 82fa17d9-edb8-4107-86da-159881691597 PASSED
+2024-04-29 01:59:49,956 - INFO - Finished test: 82fa17d9-edb8-4107-86da-159881691597, Status: PASSED, Exception: None, Duration: 0.00013429499995254446
+2024-04-29 01:59:49,968 - INFO - Started test: test_error
+2024-04-29 01:59:49,969 - INFO - Test 'test_error' started with params: {}
+2024-04-29 01:59:49,969 - INFO - Test status: PASSED, Duration: 0.00017810400004236726
+2024-04-29 01:59:49,969 - INFO - 43922fe7-c5c1-4fed-ba43-710b154fb367 PASSED
+2024-04-29 01:59:49,978 - INFO - Finished test: 43922fe7-c5c1-4fed-ba43-710b154fb367, Status: PASSED, Exception: None, Duration: 0.00017810400004236726
+2024-04-29 01:59:49,989 - INFO - Started test: test_skipped
+2024-04-29 01:59:49,990 - INFO - Test 'test_skipped' started with params: {}
+2024-04-29 01:59:49,990 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py', 10, 'Skipped: Test is skipped for a reason')
+2024-04-29 01:59:49,991 - INFO - 1528a9d5-cae2-4001-adfb-8c707965edf5 SKIPPED
+2024-04-29 01:59:50,001 - INFO - Finished test: 1528a9d5-cae2-4001-adfb-8c707965edf5, Status: SKIPPED, Exception: None, Duration: None
+2024-04-29 01:59:50,011 - INFO - Started test: test_expected_failure
+2024-04-29 01:59:50,012 - INFO - Test 'test_expected_failure' started with params: {}
+2024-04-29 01:59:50,032 - INFO - Test status: SKIPPED, Duration: 0.0003242560001126549
+2024-04-29 01:59:50,032 - INFO - eceba9a6-968e-4949-a24a-cf40853db964 SKIPPED
+2024-04-29 01:59:50,045 - INFO - Finished test: eceba9a6-968e-4949-a24a-cf40853db964, Status: SKIPPED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py:17: assert False, Duration: 0.0003242560001126549
+2024-04-29 01:59:50,056 - INFO - Started test: test_unexpected_failure
+2024-04-29 01:59:50,056 - INFO - Test 'test_unexpected_failure' started with params: {}
+2024-04-29 01:59:50,057 - INFO - Test status: FAILED, Duration: 0.00014656700022896985
+2024-04-29 01:59:50,057 - INFO - e84bac6c-e2e5-48c7-9338-2dbfce4ab2e6 FAILED
+2024-04-29 01:59:50,067 - INFO - Finished test: e84bac6c-e2e5-48c7-9338-2dbfce4ab2e6, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py:20: assert False, Duration: 0.00014656700022896985
+2024-04-29 01:59:50,078 - INFO - Started test: test_examples[2-2]
+2024-04-29 01:59:50,078 - INFO - Test 'test_examples[2-2]' started with params: {'left': 2, 'right': 2}
+2024-04-29 01:59:50,079 - INFO - Test status: PASSED, Duration: 0.0002561290002631722
+2024-04-29 01:59:50,079 - INFO - 2c69f1a8-c0cd-40b3-b7d5-ad1dae740da6 PASSED
+2024-04-29 01:59:50,089 - INFO - Finished test: 2c69f1a8-c0cd-40b3-b7d5-ad1dae740da6, Status: PASSED, Exception: None, Duration: 0.0002561290002631722
+2024-04-29 01:59:50,099 - INFO - Started test: test_examples[3.14-5.55]
+2024-04-29 01:59:50,099 - INFO - Test 'test_examples[3.14-5.55]' started with params: {'left': 3.14, 'right': 5.55}
+2024-04-29 01:59:50,099 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py', 5, 'Skipped: Skipped!')
+2024-04-29 01:59:50,099 - INFO - f366187c-7186-419d-81ed-71e58435d425 SKIPPED
+2024-04-29 01:59:50,108 - INFO - Finished test: f366187c-7186-419d-81ed-71e58435d425, Status: SKIPPED, Exception: None, Duration: None
+2024-04-29 01:59:50,119 - INFO - Started test: test_examples[nan-42]
+2024-04-29 01:59:50,119 - INFO - Test 'test_examples[nan-42]' started with params: {'left': nan, 'right': 42}
+2024-04-29 01:59:50,123 - INFO - Test status: FAILED, Duration: 0.0004532100001597428
+2024-04-29 01:59:50,123 - INFO - 36ab12fa-ea44-4a83-8dd1-80e741ec916b FAILED
+2024-04-29 01:59:50,134 - INFO - Finished test: 36ab12fa-ea44-4a83-8dd1-80e741ec916b, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py:14: assert (nan + 42) == (42 + nan), Duration: 0.0004532100001597428
+2024-04-29 01:59:50,144 - INFO - Started test: test_properties
+2024-04-29 01:59:50,144 - INFO - Test 'test_properties' started with params: {}
+2024-04-29 01:59:51,037 - INFO - Test status: FAILED, Duration: 0.8911643779997576
+2024-04-29 01:59:51,037 - INFO - 1c0eb2f4-e623-4f4d-8c38-25061e744190 FAILED
+2024-04-29 01:59:51,050 - INFO - Finished test: 1c0eb2f4-e623-4f4d-8c38-25061e744190, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py:21: assert (0 + nan) == (nan + 0), Duration: 0.8911643779997576
+2024-04-29 01:59:51,080 - INFO - Test status: FAILED, Duration: 0.00014656700022896985
+2024-04-29 01:59:51,080 - INFO - Test status: FAILED, Duration: 0.0004532100001597428
+2024-04-29 01:59:51,080 - INFO - Test status: FAILED, Duration: 0.8911643779997576
+2024-04-29 01:59:51,094 - INFO - Test run finished
+2024-04-29 03:22:09,781 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:22:09,804 - INFO - <Response [200]>
+2024-04-29 03:22:09,804 - INFO - f604c261-61f2-4de7-8374-c30212b7314a
+2024-04-29 03:22:09,804 - INFO - Test run started
+2024-04-29 03:22:10,119 - INFO - Started test: test_passing
+2024-04-29 03:22:10,119 - INFO - Test 'test_passing' started with params: {}
+2024-04-29 03:22:10,121 - INFO - Test status: PASSED, Duration: 0.000708531999407569
+2024-04-29 03:22:10,121 - INFO - c67ab890-0542-4c9b-99cd-82444e9ea41d PASSED
+2024-04-29 03:22:10,127 - INFO - Finished test: c67ab890-0542-4c9b-99cd-82444e9ea41d, Status: PASSED, Exception: None, Duration: 0.000708531999407569
+2024-04-29 03:22:10,129 - INFO - Started test: test_error
+2024-04-29 03:22:10,129 - INFO - Test 'test_error' started with params: {}
+2024-04-29 03:22:10,130 - INFO - Test status: PASSED, Duration: 0.00017847399976744782
+2024-04-29 03:22:10,130 - INFO - 6382091a-659f-48b3-81c0-9257e9fd510c PASSED
+2024-04-29 03:22:10,132 - INFO - Finished test: 6382091a-659f-48b3-81c0-9257e9fd510c, Status: PASSED, Exception: None, Duration: 0.00017847399976744782
+2024-04-29 03:22:10,135 - INFO - Started test: test_skipped
+2024-04-29 03:22:10,135 - INFO - Test 'test_skipped' started with params: {}
+2024-04-29 03:22:10,135 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py', 10, 'Skipped: Test is skipped for a reason')
+2024-04-29 03:22:10,136 - INFO - bec96fb0-4322-474d-b3b8-d28fe3d1fe72 SKIPPED
+2024-04-29 03:22:10,138 - INFO - Finished test: bec96fb0-4322-474d-b3b8-d28fe3d1fe72, Status: SKIPPED, Exception: None, Duration: None
+2024-04-29 03:22:10,140 - INFO - Started test: test_expected_failure
+2024-04-29 03:22:10,140 - INFO - Test 'test_expected_failure' started with params: {}
+2024-04-29 03:22:10,153 - INFO - Test status: SKIPPED, Duration: 0.0001512119997642003
+2024-04-29 03:22:10,153 - INFO - caf82adf-2865-411e-80ef-42e81189f9fc SKIPPED
+2024-04-29 03:22:10,158 - INFO - Finished test: caf82adf-2865-411e-80ef-42e81189f9fc, Status: SKIPPED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py:17: assert False, Duration: 0.0001512119997642003
+2024-04-29 03:22:10,162 - INFO - Started test: test_unexpected_failure
+2024-04-29 03:22:10,162 - INFO - Test 'test_unexpected_failure' started with params: {}
+2024-04-29 03:22:10,163 - INFO - Test status: FAILED, Duration: 0.00015148599959502462
+2024-04-29 03:22:10,163 - INFO - 759ee4da-ce8d-4465-abee-03cfc8a0e098 FAILED
+2024-04-29 03:22:10,167 - INFO - Finished test: 759ee4da-ce8d-4465-abee-03cfc8a0e098, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py:20: assert False, Duration: 0.00015148599959502462
+2024-04-29 03:22:10,171 - INFO - Started test: test_examples[2-2]
+2024-04-29 03:22:10,171 - INFO - Test 'test_examples[2-2]' started with params: {'left': 2, 'right': 2}
+2024-04-29 03:22:10,172 - INFO - Test status: PASSED, Duration: 0.00019086700012849178
+2024-04-29 03:22:10,172 - INFO - 36cc9a19-b05b-4ee7-817b-103f2afe081c PASSED
+2024-04-29 03:22:10,175 - INFO - Finished test: 36cc9a19-b05b-4ee7-817b-103f2afe081c, Status: PASSED, Exception: None, Duration: 0.00019086700012849178
+2024-04-29 03:22:10,178 - INFO - Started test: test_examples[3.14-5.55]
+2024-04-29 03:22:10,178 - INFO - Test 'test_examples[3.14-5.55]' started with params: {'left': 3.14, 'right': 5.55}
+2024-04-29 03:22:10,179 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py', 5, 'Skipped: Skipped!')
+2024-04-29 03:22:10,179 - INFO - ca7400e6-039b-4b8a-907b-59bfff9e5599 SKIPPED
+2024-04-29 03:22:10,182 - INFO - Finished test: ca7400e6-039b-4b8a-907b-59bfff9e5599, Status: SKIPPED, Exception: None, Duration: None
+2024-04-29 03:22:10,186 - INFO - Started test: test_examples[nan-42]
+2024-04-29 03:22:10,186 - INFO - Test 'test_examples[nan-42]' started with params: {'left': nan, 'right': 42}
+2024-04-29 03:22:10,190 - INFO - Test status: FAILED, Duration: 0.0004531049999059178
+2024-04-29 03:22:10,190 - INFO - ac2530e6-90cd-4d71-9623-92b123fcc727 FAILED
+2024-04-29 03:22:10,194 - INFO - Finished test: ac2530e6-90cd-4d71-9623-92b123fcc727, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py:14: assert (nan + 42) == (42 + nan), Duration: 0.0004531049999059178
+2024-04-29 03:22:10,199 - INFO - Started test: test_properties
+2024-04-29 03:22:10,199 - INFO - Test 'test_properties' started with params: {}
+2024-04-29 03:22:10,429 - INFO - Test status: FAILED, Duration: 0.22839558399937232
+2024-04-29 03:22:10,430 - INFO - ae0be95a-d31d-4dd8-a865-0abde2d4d313 FAILED
+2024-04-29 03:22:10,434 - INFO - Finished test: ae0be95a-d31d-4dd8-a865-0abde2d4d313, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py:21: assert (0 + nan) == (nan + 0), Duration: 0.22839558399937232
+2024-04-29 03:22:10,439 - INFO - Test status: FAILED, Duration: 0.00015148599959502462
+2024-04-29 03:22:10,439 - INFO - Test status: FAILED, Duration: 0.0004531049999059178
+2024-04-29 03:22:10,439 - INFO - Test status: FAILED, Duration: 0.22839558399937232
+2024-04-29 03:22:10,442 - INFO - Test run finished
+2024-04-29 03:28:59,133 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:28:59,156 - INFO - <Response [200]>
+2024-04-29 03:28:59,156 - INFO - af5ee378-207e-4878-8f5d-c11011ffd41e
+2024-04-29 03:28:59,157 - INFO - Test run started
+2024-04-29 03:28:59,250 - INFO - Started test: test_passing
+2024-04-29 03:28:59,251 - INFO - Test 'test_passing' started with params: {}
+2024-04-29 03:28:59,252 - INFO - Test status: PASSED, Duration: 0.00032716999885451514
+2024-04-29 03:28:59,252 - INFO - bf63a7fe-18b7-4018-8292-6748b43a414e PASSED
+2024-04-29 03:28:59,264 - INFO - Finished test: bf63a7fe-18b7-4018-8292-6748b43a414e, Status: PASSED, Exception: None, Duration: 0.00032716999885451514
+2024-04-29 03:28:59,275 - INFO - Started test: test_error
+2024-04-29 03:28:59,276 - INFO - Test 'test_error' started with params: {}
+2024-04-29 03:28:59,276 - INFO - Test status: PASSED, Duration: 0.0001559310003358405
+2024-04-29 03:28:59,276 - INFO - 958eed01-b682-487a-b690-2b0ce2597ed4 PASSED
+2024-04-29 03:28:59,287 - INFO - Finished test: 958eed01-b682-487a-b690-2b0ce2597ed4, Status: PASSED, Exception: None, Duration: 0.0001559310003358405
+2024-04-29 03:28:59,300 - INFO - Started test: test_skipped
+2024-04-29 03:28:59,300 - INFO - Test 'test_skipped' started with params: {}
+2024-04-29 03:28:59,301 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py', 10, 'Skipped: Test is skipped for a reason')
+2024-04-29 03:28:59,301 - INFO - d8936178-f9e0-4623-b9bf-21b1ed934109 SKIPPED
+2024-04-29 03:28:59,313 - INFO - Finished test: d8936178-f9e0-4623-b9bf-21b1ed934109, Status: SKIPPED, Exception: None, Duration: None
+2024-04-29 03:28:59,325 - INFO - Started test: test_expected_failure
+2024-04-29 03:28:59,325 - INFO - Test 'test_expected_failure' started with params: {}
+2024-04-29 03:28:59,339 - INFO - Test status: SKIPPED, Duration: 0.00022862900004838593
+2024-04-29 03:28:59,339 - INFO - 329d6392-ea3d-4660-b4b8-e792bf592d82 SKIPPED
+2024-04-29 03:28:59,351 - INFO - Finished test: 329d6392-ea3d-4660-b4b8-e792bf592d82, Status: SKIPPED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py:17: assert False, Duration: 0.00022862900004838593
+2024-04-29 03:28:59,362 - INFO - Started test: test_unexpected_failure
+2024-04-29 03:28:59,362 - INFO - Test 'test_unexpected_failure' started with params: {}
+2024-04-29 03:28:59,364 - INFO - Test status: FAILED, Duration: 0.0002792129998852033
+2024-04-29 03:28:59,365 - INFO - 4f6b7c93-79dc-489a-a3fd-6e0b6eb329a5 FAILED
+2024-04-29 03:28:59,375 - INFO - Finished test: 4f6b7c93-79dc-489a-a3fd-6e0b6eb329a5, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py:20: assert False, Duration: 0.0002792129998852033
+2024-04-29 03:28:59,387 - INFO - Started test: test_examples[2-2]
+2024-04-29 03:28:59,387 - INFO - Test 'test_examples[2-2]' started with params: {'left': 2, 'right': 2}
+2024-04-29 03:28:59,388 - INFO - Test status: PASSED, Duration: 0.00030723300005774945
+2024-04-29 03:28:59,389 - INFO - 3b492be4-865c-4dee-ae87-6871f836f0d6 PASSED
+2024-04-29 03:28:59,400 - INFO - Finished test: 3b492be4-865c-4dee-ae87-6871f836f0d6, Status: PASSED, Exception: None, Duration: 0.00030723300005774945
+2024-04-29 03:28:59,411 - INFO - Started test: test_examples[3.14-5.55]
+2024-04-29 03:28:59,411 - INFO - Test 'test_examples[3.14-5.55]' started with params: {'left': 3.14, 'right': 5.55}
+2024-04-29 03:28:59,412 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py', 5, 'Skipped: Skipped!')
+2024-04-29 03:28:59,412 - INFO - 94f85bc7-8224-4278-8107-d475b9e83d49 SKIPPED
+2024-04-29 03:28:59,424 - INFO - Finished test: 94f85bc7-8224-4278-8107-d475b9e83d49, Status: SKIPPED, Exception: None, Duration: None
+2024-04-29 03:28:59,435 - INFO - Started test: test_examples[nan-42]
+2024-04-29 03:28:59,435 - INFO - Test 'test_examples[nan-42]' started with params: {'left': nan, 'right': 42}
+2024-04-29 03:28:59,439 - INFO - Test status: FAILED, Duration: 0.0005581119985436089
+2024-04-29 03:28:59,440 - INFO - 8bddb29d-1151-47a7-9e1f-c9aa0599106a FAILED
+2024-04-29 03:28:59,453 - INFO - Finished test: 8bddb29d-1151-47a7-9e1f-c9aa0599106a, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py:14: assert (nan + 42) == (42 + nan), Duration: 0.0005581119985436089
+2024-04-29 03:28:59,464 - INFO - Started test: test_properties
+2024-04-29 03:28:59,464 - INFO - Test 'test_properties' started with params: {}
+2024-04-29 03:28:59,690 - INFO - Test status: FAILED, Duration: 0.22414826099884522
+2024-04-29 03:28:59,690 - INFO - 2430db25-284c-4b0e-862e-7d8432ad43b6 FAILED
+2024-04-29 03:28:59,703 - INFO - Finished test: 2430db25-284c-4b0e-862e-7d8432ad43b6, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py:21: assert (0 + nan) == (nan + 0), Duration: 0.22414826099884522
+2024-04-29 03:28:59,708 - INFO - Test status: FAILED, Duration: 0.0002792129998852033
+2024-04-29 03:28:59,709 - INFO - Test status: FAILED, Duration: 0.0005581119985436089
+2024-04-29 03:28:59,709 - INFO - Test status: FAILED, Duration: 0.22414826099884522
+2024-04-29 03:28:59,720 - INFO - Test run finished
+2024-04-29 03:34:02,308 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:34:02,316 - INFO - <Response [400]>
+2024-04-29 03:34:02,316 - INFO - edcd0867-7ced-4564-a44b-f0010433b8b6
+2024-04-29 03:34:02,316 - INFO - Test run started
+2024-04-29 03:34:02,404 - INFO - Started test: test_passing
+2024-04-29 03:34:02,404 - INFO - Test 'test_passing' started with params: {}
+2024-04-29 03:34:02,406 - INFO - Test status: PASSED, Duration: 0.0003647600005933782
+2024-04-29 03:34:02,406 - INFO - bf6dfd6e-9f54-4112-b47e-d7f37a9e99b1 PASSED
+2024-04-29 03:34:02,417 - INFO - Finished test: bf6dfd6e-9f54-4112-b47e-d7f37a9e99b1, Status: PASSED, Exception: None, Duration: 0.0003647600005933782
+2024-04-29 03:34:02,427 - INFO - Started test: test_error
+2024-04-29 03:34:02,427 - INFO - Test 'test_error' started with params: {}
+2024-04-29 03:34:02,428 - INFO - Test status: PASSED, Duration: 0.00043808200098283123
+2024-04-29 03:34:02,428 - INFO - e29802a9-860d-409e-8fda-c66fa70cdcd0 PASSED
+2024-04-29 03:34:02,444 - INFO - Finished test: e29802a9-860d-409e-8fda-c66fa70cdcd0, Status: PASSED, Exception: None, Duration: 0.00043808200098283123
+2024-04-29 03:34:02,455 - INFO - Started test: test_skipped
+2024-04-29 03:34:02,455 - INFO - Test 'test_skipped' started with params: {}
+2024-04-29 03:34:02,456 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py', 10, 'Skipped: Test is skipped for a reason')
+2024-04-29 03:34:02,456 - INFO - dedbef2b-67fd-47aa-9c13-fcf9d29f88dc SKIPPED
+2024-04-29 03:34:02,468 - INFO - Finished test: dedbef2b-67fd-47aa-9c13-fcf9d29f88dc, Status: SKIPPED, Exception: None, Duration: None
+2024-04-29 03:34:02,480 - INFO - Started test: test_expected_failure
+2024-04-29 03:34:02,480 - INFO - Test 'test_expected_failure' started with params: {}
+2024-04-29 03:34:02,496 - INFO - Test status: SKIPPED, Duration: 0.00028529600058391225
+2024-04-29 03:34:02,496 - INFO - cfdac731-239c-4532-af68-4cb2cabe13fb SKIPPED
+2024-04-29 03:34:02,508 - INFO - Finished test: cfdac731-239c-4532-af68-4cb2cabe13fb, Status: SKIPPED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py:17: assert False, Duration: 0.00028529600058391225
+2024-04-29 03:34:02,518 - INFO - Started test: test_unexpected_failure
+2024-04-29 03:34:02,518 - INFO - Test 'test_unexpected_failure' started with params: {}
+2024-04-29 03:34:02,520 - INFO - Test status: FAILED, Duration: 0.00019024100038222969
+2024-04-29 03:34:02,520 - INFO - b0e2d30f-2274-43fc-8635-f7c8f81651c9 FAILED
+2024-04-29 03:34:02,531 - INFO - Finished test: b0e2d30f-2274-43fc-8635-f7c8f81651c9, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py:20: assert False, Duration: 0.00019024100038222969
+2024-04-29 03:34:02,542 - INFO - Started test: test_examples[2-2]
+2024-04-29 03:34:02,542 - INFO - Test 'test_examples[2-2]' started with params: {'left': 2, 'right': 2}
+2024-04-29 03:34:02,543 - INFO - Test status: PASSED, Duration: 0.00029279999944265
+2024-04-29 03:34:02,543 - INFO - e017b363-c2de-4253-b733-b7ad22ee2ccc PASSED
+2024-04-29 03:34:02,555 - INFO - Finished test: e017b363-c2de-4253-b733-b7ad22ee2ccc, Status: PASSED, Exception: None, Duration: 0.00029279999944265
+2024-04-29 03:34:02,567 - INFO - Started test: test_examples[3.14-5.55]
+2024-04-29 03:34:02,567 - INFO - Test 'test_examples[3.14-5.55]' started with params: {'left': 3.14, 'right': 5.55}
+2024-04-29 03:34:02,567 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py', 5, 'Skipped: Skipped!')
+2024-04-29 03:34:02,568 - INFO - 02e3c92e-e513-460d-8f54-fe02762407ad SKIPPED
+2024-04-29 03:34:02,579 - INFO - Finished test: 02e3c92e-e513-460d-8f54-fe02762407ad, Status: SKIPPED, Exception: None, Duration: None
+2024-04-29 03:34:02,590 - INFO - Started test: test_examples[nan-42]
+2024-04-29 03:34:02,590 - INFO - Test 'test_examples[nan-42]' started with params: {'left': nan, 'right': 42}
+2024-04-29 03:34:02,593 - INFO - Test status: FAILED, Duration: 0.00043242299943813123
+2024-04-29 03:34:02,593 - INFO - a7d6be3a-10b7-41dd-b539-e057736e5bf2 FAILED
+2024-04-29 03:34:02,604 - INFO - Finished test: a7d6be3a-10b7-41dd-b539-e057736e5bf2, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py:14: assert (nan + 42) == (42 + nan), Duration: 0.00043242299943813123
+2024-04-29 03:34:02,613 - INFO - Started test: test_properties
+2024-04-29 03:34:02,613 - INFO - Test 'test_properties' started with params: {}
+2024-04-29 03:34:02,836 - INFO - Test status: FAILED, Duration: 0.22145906900004775
+2024-04-29 03:34:02,836 - INFO - f0f5d3ea-83e2-42a5-aa82-25e88ed117d9 FAILED
+2024-04-29 03:34:02,848 - INFO - Finished test: f0f5d3ea-83e2-42a5-aa82-25e88ed117d9, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py:21: assert (0 + nan) == (nan + 0), Duration: 0.22145906900004775
+2024-04-29 03:34:02,851 - INFO - Test status: FAILED, Duration: 0.00019024100038222969
+2024-04-29 03:34:02,851 - INFO - Test status: FAILED, Duration: 0.00043242299943813123
+2024-04-29 03:34:02,851 - INFO - Test status: FAILED, Duration: 0.22145906900004775
+2024-04-29 03:34:02,853 - INFO - Test run finished
+2024-04-29 03:34:26,595 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:34:26,615 - INFO - <Response [200]>
+2024-04-29 03:34:26,615 - INFO - eee50d6f-2043-4887-8510-9bac40323855
+2024-04-29 03:34:26,615 - INFO - Test run started
+2024-04-29 03:34:26,712 - INFO - Started test: test_passing
+2024-04-29 03:34:26,712 - INFO - Test 'test_passing' started with params: {}
+2024-04-29 03:34:26,714 - INFO - Test status: PASSED, Duration: 0.0003862489993480267
+2024-04-29 03:34:26,714 - INFO - 8cee2db4-0add-4a2a-8705-ab70670eaf0e PASSED
+2024-04-29 03:34:26,726 - INFO - Finished test: 8cee2db4-0add-4a2a-8705-ab70670eaf0e, Status: PASSED, Exception: None, Duration: 0.0003862489993480267
+2024-04-29 03:34:26,736 - INFO - Started test: test_error
+2024-04-29 03:34:26,737 - INFO - Test 'test_error' started with params: {}
+2024-04-29 03:34:26,738 - INFO - Test status: PASSED, Duration: 0.0004396419990371214
+2024-04-29 03:34:26,738 - INFO - bd08430d-b732-4934-aa8f-c5b8d4b6d73a PASSED
+2024-04-29 03:34:26,749 - INFO - Finished test: bd08430d-b732-4934-aa8f-c5b8d4b6d73a, Status: PASSED, Exception: None, Duration: 0.0004396419990371214
+2024-04-29 03:34:26,758 - INFO - Started test: test_skipped
+2024-04-29 03:34:26,758 - INFO - Test 'test_skipped' started with params: {}
+2024-04-29 03:34:26,759 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py', 10, 'Skipped: Test is skipped for a reason')
+2024-04-29 03:34:26,759 - INFO - 372632a9-2419-4fa9-9f07-b32d0f19cb27 SKIPPED
+2024-04-29 03:34:26,768 - INFO - Finished test: 372632a9-2419-4fa9-9f07-b32d0f19cb27, Status: SKIPPED, Exception: None, Duration: None
+2024-04-29 03:34:26,777 - INFO - Started test: test_expected_failure
+2024-04-29 03:34:26,777 - INFO - Test 'test_expected_failure' started with params: {}
+2024-04-29 03:34:26,790 - INFO - Test status: SKIPPED, Duration: 0.00021492900123121217
+2024-04-29 03:34:26,790 - INFO - c3b5e124-50f3-4449-8391-961eea73e902 SKIPPED
+2024-04-29 03:34:26,800 - INFO - Finished test: c3b5e124-50f3-4449-8391-961eea73e902, Status: SKIPPED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py:17: assert False, Duration: 0.00021492900123121217
+2024-04-29 03:34:26,811 - INFO - Started test: test_unexpected_failure
+2024-04-29 03:34:26,811 - INFO - Test 'test_unexpected_failure' started with params: {}
+2024-04-29 03:34:26,812 - INFO - Test status: FAILED, Duration: 0.00016968299860309344
+2024-04-29 03:34:26,813 - INFO - 4c07cbbc-d5a8-4ed3-b88c-605aa1c00628 FAILED
+2024-04-29 03:34:26,821 - INFO - Finished test: 4c07cbbc-d5a8-4ed3-b88c-605aa1c00628, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py:20: assert False, Duration: 0.00016968299860309344
+2024-04-29 03:34:26,830 - INFO - Started test: test_examples[2-2]
+2024-04-29 03:34:26,830 - INFO - Test 'test_examples[2-2]' started with params: {'left': 2, 'right': 2}
+2024-04-29 03:34:26,831 - INFO - Test status: PASSED, Duration: 0.00010769799882837106
+2024-04-29 03:34:26,831 - INFO - 17d7170e-7f57-4d12-8db1-9ae34df79642 PASSED
+2024-04-29 03:34:26,839 - INFO - Finished test: 17d7170e-7f57-4d12-8db1-9ae34df79642, Status: PASSED, Exception: None, Duration: 0.00010769799882837106
+2024-04-29 03:34:26,848 - INFO - Started test: test_examples[3.14-5.55]
+2024-04-29 03:34:26,848 - INFO - Test 'test_examples[3.14-5.55]' started with params: {'left': 3.14, 'right': 5.55}
+2024-04-29 03:34:26,849 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py', 5, 'Skipped: Skipped!')
+2024-04-29 03:34:26,849 - INFO - b5cf6cf1-9183-404f-91a0-6d93cc12e3a6 SKIPPED
+2024-04-29 03:34:26,857 - INFO - Finished test: b5cf6cf1-9183-404f-91a0-6d93cc12e3a6, Status: SKIPPED, Exception: None, Duration: None
+2024-04-29 03:34:26,867 - INFO - Started test: test_examples[nan-42]
+2024-04-29 03:34:26,867 - INFO - Test 'test_examples[nan-42]' started with params: {'left': nan, 'right': 42}
+2024-04-29 03:34:26,868 - INFO - Test status: FAILED, Duration: 0.00020379099987621885
+2024-04-29 03:34:26,868 - INFO - 872e302d-3bc2-4003-b953-fe3c27dfc910 FAILED
+2024-04-29 03:34:26,877 - INFO - Finished test: 872e302d-3bc2-4003-b953-fe3c27dfc910, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py:14: assert (nan + 42) == (42 + nan), Duration: 0.00020379099987621885
+2024-04-29 03:34:26,886 - INFO - Started test: test_properties
+2024-04-29 03:34:26,886 - INFO - Test 'test_properties' started with params: {}
+2024-04-29 03:34:27,104 - INFO - Test status: FAILED, Duration: 0.21703539599911892
+2024-04-29 03:34:27,104 - INFO - 91f9ede8-f194-45c2-a5e5-2a2a7a2f80ba FAILED
+2024-04-29 03:34:27,115 - INFO - Finished test: 91f9ede8-f194-45c2-a5e5-2a2a7a2f80ba, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py:21: assert (0 + nan) == (nan + 0), Duration: 0.21703539599911892
+2024-04-29 03:34:27,118 - INFO - Test status: FAILED, Duration: 0.00016968299860309344
+2024-04-29 03:34:27,118 - INFO - Test status: FAILED, Duration: 0.00020379099987621885
+2024-04-29 03:34:27,118 - INFO - Test status: FAILED, Duration: 0.21703539599911892
+2024-04-29 03:34:27,128 - INFO - Test run finished
+2024-04-29 03:37:39,152 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:37:39,159 - INFO - <Response [400]>
+2024-04-29 03:37:39,159 - INFO - 6b99a580-f9ea-4b09-88cb-884c702548e0
+2024-04-29 03:37:39,159 - INFO - Test run started
+2024-04-29 03:37:39,247 - INFO - Started test: test_passing
+2024-04-29 03:37:39,247 - INFO - Test 'test_passing' started with params: {}
+2024-04-29 03:37:39,249 - INFO - Test status: PASSED, Duration: 0.0003292170003987849
+2024-04-29 03:37:39,249 - INFO - c5a45ed0-f8e7-4d4f-bb36-b717202a5296 PASSED
+2024-04-29 03:37:39,260 - INFO - Finished test: c5a45ed0-f8e7-4d4f-bb36-b717202a5296, Status: PASSED, Exception: None, Duration: 0.0003292170003987849
+2024-04-29 03:37:39,269 - INFO - Started test: test_error
+2024-04-29 03:37:39,269 - INFO - Test 'test_error' started with params: {}
+2024-04-29 03:37:39,270 - INFO - Test status: PASSED, Duration: 0.0004166170001553837
+2024-04-29 03:37:39,270 - INFO - d8b4718e-844e-4596-a84e-c9acd9bc83fd PASSED
+2024-04-29 03:37:39,281 - INFO - Finished test: d8b4718e-844e-4596-a84e-c9acd9bc83fd, Status: PASSED, Exception: None, Duration: 0.0004166170001553837
+2024-04-29 03:37:39,293 - INFO - Started test: test_skipped
+2024-04-29 03:37:39,293 - INFO - Test 'test_skipped' started with params: {}
+2024-04-29 03:37:39,294 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py', 10, 'Skipped: Test is skipped for a reason')
+2024-04-29 03:37:39,294 - INFO - da6229bb-e3d3-4236-97d0-f7a412ef7624 SKIPPED
+2024-04-29 03:37:39,305 - INFO - Finished test: da6229bb-e3d3-4236-97d0-f7a412ef7624, Status: SKIPPED, Exception: None, Duration: None
+2024-04-29 03:37:39,315 - INFO - Started test: test_expected_failure
+2024-04-29 03:37:39,315 - INFO - Test 'test_expected_failure' started with params: {}
+2024-04-29 03:37:39,332 - INFO - Test status: SKIPPED, Duration: 0.00034421400050632656
+2024-04-29 03:37:39,332 - INFO - 07572b61-cafd-4a87-816d-304c8f549f3b SKIPPED
+2024-04-29 03:37:39,341 - INFO - Finished test: 07572b61-cafd-4a87-816d-304c8f549f3b, Status: SKIPPED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py:17: assert False, Duration: 0.00034421400050632656
+2024-04-29 03:37:39,351 - INFO - Started test: test_unexpected_failure
+2024-04-29 03:37:39,351 - INFO - Test 'test_unexpected_failure' started with params: {}
+2024-04-29 03:37:39,352 - INFO - Test status: FAILED, Duration: 0.00014574300075764768
+2024-04-29 03:37:39,352 - INFO - 776390d4-bc2c-42e9-bd48-105d36430013 FAILED
+2024-04-29 03:37:39,362 - INFO - Finished test: 776390d4-bc2c-42e9-bd48-105d36430013, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py:20: assert False, Duration: 0.00014574300075764768
+2024-04-29 03:37:39,370 - INFO - Started test: test_examples[2-2]
+2024-04-29 03:37:39,370 - INFO - Test 'test_examples[2-2]' started with params: {'left': 2, 'right': 2}
+2024-04-29 03:37:39,371 - INFO - Test status: PASSED, Duration: 0.00010115999975823797
+2024-04-29 03:37:39,371 - INFO - d7bcbd30-9e01-4a00-bd69-16ca15ecddd3 PASSED
+2024-04-29 03:37:39,381 - INFO - Finished test: d7bcbd30-9e01-4a00-bd69-16ca15ecddd3, Status: PASSED, Exception: None, Duration: 0.00010115999975823797
+2024-04-29 03:37:39,389 - INFO - Started test: test_examples[3.14-5.55]
+2024-04-29 03:37:39,389 - INFO - Test 'test_examples[3.14-5.55]' started with params: {'left': 3.14, 'right': 5.55}
+2024-04-29 03:37:39,389 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py', 5, 'Skipped: Skipped!')
+2024-04-29 03:37:39,389 - INFO - 4de0a400-8ec6-4641-a809-28641faed765 SKIPPED
+2024-04-29 03:37:39,399 - INFO - Finished test: 4de0a400-8ec6-4641-a809-28641faed765, Status: SKIPPED, Exception: None, Duration: None
+2024-04-29 03:37:39,407 - INFO - Started test: test_examples[nan-42]
+2024-04-29 03:37:39,407 - INFO - Test 'test_examples[nan-42]' started with params: {'left': nan, 'right': 42}
+2024-04-29 03:37:39,409 - INFO - Test status: FAILED, Duration: 0.00021787000150652602
+2024-04-29 03:37:39,409 - INFO - 5cd05ee3-6a75-4eb7-8b1d-2b863489513d FAILED
+2024-04-29 03:37:39,419 - INFO - Finished test: 5cd05ee3-6a75-4eb7-8b1d-2b863489513d, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py:14: assert (nan + 42) == (42 + nan), Duration: 0.00021787000150652602
+2024-04-29 03:37:39,428 - INFO - Started test: test_properties
+2024-04-29 03:37:39,429 - INFO - Test 'test_properties' started with params: {}
+2024-04-29 03:37:39,650 - INFO - Test status: FAILED, Duration: 0.21982142599881627
+2024-04-29 03:37:39,650 - INFO - 3e357e18-fea6-45a0-b78f-0abec6d34130 FAILED
+2024-04-29 03:37:39,664 - INFO - Finished test: 3e357e18-fea6-45a0-b78f-0abec6d34130, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py:21: assert (0 + nan) == (nan + 0), Duration: 0.21982142599881627
+2024-04-29 03:37:39,670 - INFO - Test status: FAILED, Duration: 0.00014574300075764768
+2024-04-29 03:37:39,670 - INFO - Test status: FAILED, Duration: 0.00021787000150652602
+2024-04-29 03:37:39,670 - INFO - Test status: FAILED, Duration: 0.21982142599881627
+2024-04-29 03:37:39,675 - INFO - Test run finished
+2024-04-29 03:37:53,710 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:37:53,727 - INFO - <Response [200]>
+2024-04-29 03:37:53,727 - INFO - 1de27b73-30ac-4ad0-afbe-45d054e3e5ea
+2024-04-29 03:37:53,727 - INFO - Test run started
+2024-04-29 03:37:53,834 - INFO - Started test: test_passing
+2024-04-29 03:37:53,835 - INFO - Test 'test_passing' started with params: {}
+2024-04-29 03:37:53,836 - INFO - Test status: PASSED, Duration: 0.0003274139999120962
+2024-04-29 03:37:53,836 - INFO - 452ee681-ab11-427a-836c-617dd7e29764 PASSED
+2024-04-29 03:37:53,850 - INFO - Finished test: 452ee681-ab11-427a-836c-617dd7e29764, Status: PASSED, Exception: None, Duration: 0.0003274139999120962
+2024-04-29 03:37:53,862 - INFO - Started test: test_error
+2024-04-29 03:37:53,862 - INFO - Test 'test_error' started with params: {}
+2024-04-29 03:37:53,863 - INFO - Test status: PASSED, Duration: 0.0003257309999753488
+2024-04-29 03:37:53,863 - INFO - 4171cda5-5ddb-47b0-8405-5e6753bed88b PASSED
+2024-04-29 03:37:53,873 - INFO - Finished test: 4171cda5-5ddb-47b0-8405-5e6753bed88b, Status: PASSED, Exception: None, Duration: 0.0003257309999753488
+2024-04-29 03:37:53,884 - INFO - Started test: test_skipped
+2024-04-29 03:37:53,884 - INFO - Test 'test_skipped' started with params: {}
+2024-04-29 03:37:53,885 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py', 10, 'Skipped: Test is skipped for a reason')
+2024-04-29 03:37:53,885 - INFO - dd6a2822-9635-4ca6-89b6-1437e6e7d08c SKIPPED
+2024-04-29 03:37:53,896 - INFO - Finished test: dd6a2822-9635-4ca6-89b6-1437e6e7d08c, Status: SKIPPED, Exception: None, Duration: None
+2024-04-29 03:37:53,908 - INFO - Started test: test_expected_failure
+2024-04-29 03:37:53,909 - INFO - Test 'test_expected_failure' started with params: {}
+2024-04-29 03:37:53,926 - INFO - Test status: SKIPPED, Duration: 0.00029726800130447373
+2024-04-29 03:37:53,926 - INFO - 054b45e1-1f97-4707-9067-f84dddae3cb2 SKIPPED
+2024-04-29 03:37:53,938 - INFO - Finished test: 054b45e1-1f97-4707-9067-f84dddae3cb2, Status: SKIPPED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py:17: assert False, Duration: 0.00029726800130447373
+2024-04-29 03:37:53,948 - INFO - Started test: test_unexpected_failure
+2024-04-29 03:37:53,948 - INFO - Test 'test_unexpected_failure' started with params: {}
+2024-04-29 03:37:53,951 - INFO - Test status: FAILED, Duration: 0.0003857299998344388
+2024-04-29 03:37:53,952 - INFO - 209f24d3-554e-4365-8c3e-29940ff3dc34 FAILED
+2024-04-29 03:37:53,962 - INFO - Finished test: 209f24d3-554e-4365-8c3e-29940ff3dc34, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py:20: assert False, Duration: 0.0003857299998344388
+2024-04-29 03:37:53,973 - INFO - Started test: test_examples[2-2]
+2024-04-29 03:37:53,973 - INFO - Test 'test_examples[2-2]' started with params: {'left': 2, 'right': 2}
+2024-04-29 03:37:53,975 - INFO - Test status: PASSED, Duration: 0.00033358300061081536
+2024-04-29 03:37:53,975 - INFO - a3ed03d9-f78d-44ad-9333-1716b454b2f9 PASSED
+2024-04-29 03:37:53,985 - INFO - Finished test: a3ed03d9-f78d-44ad-9333-1716b454b2f9, Status: PASSED, Exception: None, Duration: 0.00033358300061081536
+2024-04-29 03:37:53,996 - INFO - Started test: test_examples[3.14-5.55]
+2024-04-29 03:37:53,996 - INFO - Test 'test_examples[3.14-5.55]' started with params: {'left': 3.14, 'right': 5.55}
+2024-04-29 03:37:53,997 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py', 5, 'Skipped: Skipped!')
+2024-04-29 03:37:53,997 - INFO - 2784ee00-9aec-4e01-a803-f264611e12d2 SKIPPED
+2024-04-29 03:37:54,008 - INFO - Finished test: 2784ee00-9aec-4e01-a803-f264611e12d2, Status: SKIPPED, Exception: None, Duration: None
+2024-04-29 03:37:54,020 - INFO - Started test: test_examples[nan-42]
+2024-04-29 03:37:54,020 - INFO - Test 'test_examples[nan-42]' started with params: {'left': nan, 'right': 42}
+2024-04-29 03:37:54,025 - INFO - Test status: FAILED, Duration: 0.0009083829991141101
+2024-04-29 03:37:54,025 - INFO - 69017d3b-7e8e-4584-977d-d6a2cd5060b5 FAILED
+2024-04-29 03:37:54,036 - INFO - Finished test: 69017d3b-7e8e-4584-977d-d6a2cd5060b5, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py:14: assert (nan + 42) == (42 + nan), Duration: 0.0009083829991141101
+2024-04-29 03:37:54,048 - INFO - Started test: test_properties
+2024-04-29 03:37:54,049 - INFO - Test 'test_properties' started with params: {}
+2024-04-29 03:37:54,269 - INFO - Test status: FAILED, Duration: 0.21933103700030188
+2024-04-29 03:37:54,270 - INFO - f8c30a57-b003-4574-a044-b5d3a8e69e17 FAILED
+2024-04-29 03:37:54,282 - INFO - Finished test: f8c30a57-b003-4574-a044-b5d3a8e69e17, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py:21: assert (0 + nan) == (nan + 0), Duration: 0.21933103700030188
+2024-04-29 03:37:54,288 - INFO - Test status: FAILED, Duration: 0.0003857299998344388
+2024-04-29 03:37:54,288 - INFO - Test status: FAILED, Duration: 0.0009083829991141101
+2024-04-29 03:37:54,288 - INFO - Test status: FAILED, Duration: 0.21933103700030188
+2024-04-29 03:37:54,304 - INFO - Test run finished
+2024-04-29 03:41:28,008 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:41:28,041 - INFO - <Response [200]>
+2024-04-29 03:41:28,041 - INFO - 853c24a4-a1ca-4d7c-9e87-5f707d3a064a
+2024-04-29 03:41:28,041 - INFO - Test run started
+2024-04-29 03:41:28,222 - INFO - Started test: test_passing
+2024-04-29 03:41:28,222 - INFO - Test 'test_passing' started with params: {}
+2024-04-29 03:41:28,224 - INFO - Test status: PASSED, Duration: 0.00032908499997574836
+2024-04-29 03:41:28,224 - INFO - 10a2e0c0-b135-453b-9351-6be38c5fd5af PASSED
+2024-04-29 03:41:28,240 - INFO - Finished test: 10a2e0c0-b135-453b-9351-6be38c5fd5af, Status: PASSED, Exception: None, Duration: 0.00032908499997574836
+2024-04-29 03:41:28,255 - INFO - Started test: test_error
+2024-04-29 03:41:28,255 - INFO - Test 'test_error' started with params: {}
+2024-04-29 03:41:28,256 - INFO - Test status: PASSED, Duration: 0.0003650600010587368
+2024-04-29 03:41:28,257 - INFO - 78381305-a44d-41c8-83a6-793d7cf23432 PASSED
+2024-04-29 03:41:28,269 - INFO - Finished test: 78381305-a44d-41c8-83a6-793d7cf23432, Status: PASSED, Exception: None, Duration: 0.0003650600010587368
+2024-04-29 03:41:28,281 - INFO - Started test: test_skipped
+2024-04-29 03:41:28,281 - INFO - Test 'test_skipped' started with params: {}
+2024-04-29 03:41:28,282 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py', 10, 'Skipped: Test is skipped for a reason')
+2024-04-29 03:41:28,282 - INFO - 4e3e5c16-688b-40df-af72-28dee1ce925a SKIPPED
+2024-04-29 03:41:28,297 - INFO - Finished test: 4e3e5c16-688b-40df-af72-28dee1ce925a, Status: SKIPPED, Exception: None, Duration: None
+2024-04-29 03:41:28,310 - INFO - Started test: test_expected_failure
+2024-04-29 03:41:28,311 - INFO - Test 'test_expected_failure' started with params: {}
+2024-04-29 03:41:28,336 - INFO - Test status: SKIPPED, Duration: 0.00032135699984792154
+2024-04-29 03:41:28,336 - INFO - 067d076b-31bc-45ac-b6e5-79c9b432cb23 SKIPPED
+2024-04-29 03:41:28,350 - INFO - Finished test: 067d076b-31bc-45ac-b6e5-79c9b432cb23, Status: SKIPPED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py:17: assert False, Duration: 0.00032135699984792154
+2024-04-29 03:41:28,365 - INFO - Started test: test_unexpected_failure
+2024-04-29 03:41:28,365 - INFO - Test 'test_unexpected_failure' started with params: {}
+2024-04-29 03:41:28,367 - INFO - Test status: FAILED, Duration: 0.0002857309991668444
+2024-04-29 03:41:28,367 - INFO - a6099b26-c553-4af5-93a4-9d8fb36769c8 FAILED
+2024-04-29 03:41:28,380 - INFO - Finished test: a6099b26-c553-4af5-93a4-9d8fb36769c8, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py:20: assert False, Duration: 0.0002857309991668444
+2024-04-29 03:41:28,395 - INFO - Started test: test_examples[2-2]
+2024-04-29 03:41:28,396 - INFO - Test 'test_examples[2-2]' started with params: {'left': 2, 'right': 2}
+2024-04-29 03:41:28,397 - INFO - Test status: PASSED, Duration: 0.0002887169994210126
+2024-04-29 03:41:28,397 - INFO - b4068139-fd40-4e45-9ef3-3e307ac605b1 PASSED
+2024-04-29 03:41:28,411 - INFO - Finished test: b4068139-fd40-4e45-9ef3-3e307ac605b1, Status: PASSED, Exception: None, Duration: 0.0002887169994210126
+2024-04-29 03:41:28,423 - INFO - Started test: test_examples[3.14-5.55]
+2024-04-29 03:41:28,423 - INFO - Test 'test_examples[3.14-5.55]' started with params: {'left': 3.14, 'right': 5.55}
+2024-04-29 03:41:28,424 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py', 5, 'Skipped: Skipped!')
+2024-04-29 03:41:28,424 - INFO - bda3a73e-c0e4-4030-baae-6f025edad7f1 SKIPPED
+2024-04-29 03:41:28,436 - INFO - Finished test: bda3a73e-c0e4-4030-baae-6f025edad7f1, Status: SKIPPED, Exception: None, Duration: None
+2024-04-29 03:41:28,447 - INFO - Started test: test_examples[nan-42]
+2024-04-29 03:41:28,447 - INFO - Test 'test_examples[nan-42]' started with params: {'left': nan, 'right': 42}
+2024-04-29 03:41:28,451 - INFO - Test status: FAILED, Duration: 0.0004991339992557187
+2024-04-29 03:41:28,452 - INFO - fa42bb0e-802f-4db6-ad61-28fb15f12841 FAILED
+2024-04-29 03:41:28,465 - INFO - Finished test: fa42bb0e-802f-4db6-ad61-28fb15f12841, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py:14: assert (nan + 42) == (42 + nan), Duration: 0.0004991339992557187
+2024-04-29 03:41:28,477 - INFO - Started test: test_properties
+2024-04-29 03:41:28,477 - INFO - Test 'test_properties' started with params: {}
+2024-04-29 03:41:28,919 - INFO - Test status: FAILED, Duration: 0.4393425689995638
+2024-04-29 03:41:28,919 - INFO - 7ad51cfa-58ab-47b1-9235-0ec2ca0b63e7 FAILED
+2024-04-29 03:41:28,935 - INFO - Finished test: 7ad51cfa-58ab-47b1-9235-0ec2ca0b63e7, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py:21: assert (0 + nan) == (nan + 0), Duration: 0.4393425689995638
+2024-04-29 03:41:28,941 - INFO - Test status: FAILED, Duration: 0.0002857309991668444
+2024-04-29 03:41:28,941 - INFO - Test status: FAILED, Duration: 0.0004991339992557187
+2024-04-29 03:41:28,941 - INFO - Test status: FAILED, Duration: 0.4393425689995638
+2024-04-29 03:41:28,956 - INFO - Test run finished
+2024-04-29 03:48:12,387 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:48:12,414 - INFO - <Response [200]>
+2024-04-29 03:48:12,414 - INFO - 58fbb637-4be6-4698-a051-88b273366b4c
+2024-04-29 03:48:12,414 - INFO - Test run started
+2024-04-29 03:48:12,505 - INFO - Started test: test_passing
+2024-04-29 03:48:12,505 - INFO - Test 'test_passing' started with params: {}
+2024-04-29 03:48:12,507 - INFO - Test status: PASSED, Duration: 0.0003667090004455531
+2024-04-29 03:48:12,507 - INFO - a7d14adc-97d6-4711-9f8f-ca0d16280a56 PASSED
+2024-04-29 03:48:12,523 - INFO - Finished test: a7d14adc-97d6-4711-9f8f-ca0d16280a56, Status: PASSED, Exception: None, Duration: 0.0003667090004455531
+2024-04-29 03:48:12,539 - INFO - Started test: test_error
+2024-04-29 03:48:12,539 - INFO - Test 'test_error' started with params: {}
+2024-04-29 03:48:12,540 - INFO - Test status: PASSED, Duration: 0.00033539400101290084
+2024-04-29 03:48:12,540 - INFO - d0f26b95-5199-41cb-af8c-6db59315fc9c PASSED
+2024-04-29 03:48:12,554 - INFO - Finished test: d0f26b95-5199-41cb-af8c-6db59315fc9c, Status: PASSED, Exception: None, Duration: 0.00033539400101290084
+2024-04-29 03:48:12,565 - INFO - Started test: test_skipped
+2024-04-29 03:48:12,565 - INFO - Test 'test_skipped' started with params: {}
+2024-04-29 03:48:12,566 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py', 10, 'Skipped: Test is skipped for a reason')
+2024-04-29 03:48:12,566 - INFO - 25efb6e2-9637-45c7-bf21-e699b0bd52cb SKIPPED
+2024-04-29 03:48:12,577 - INFO - Finished test: 25efb6e2-9637-45c7-bf21-e699b0bd52cb, Status: SKIPPED, Exception: None, Duration: None
+2024-04-29 03:48:12,591 - INFO - Started test: test_expected_failure
+2024-04-29 03:48:12,591 - INFO - Test 'test_expected_failure' started with params: {}
+2024-04-29 03:48:12,607 - INFO - Test status: SKIPPED, Duration: 0.000275562000751961
+2024-04-29 03:48:12,607 - INFO - 749741d6-8df8-4b42-bd27-46526fe22a3c SKIPPED
+2024-04-29 03:48:12,620 - INFO - Finished test: 749741d6-8df8-4b42-bd27-46526fe22a3c, Status: SKIPPED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py:17: assert False, Duration: 0.000275562000751961
+2024-04-29 03:48:12,631 - INFO - Started test: test_unexpected_failure
+2024-04-29 03:48:12,631 - INFO - Test 'test_unexpected_failure' started with params: {}
+2024-04-29 03:48:12,633 - INFO - Test status: FAILED, Duration: 0.00029115400138834957
+2024-04-29 03:48:12,634 - INFO - 45da4958-c0b9-484a-9572-5cdeba4b1d86 FAILED
+2024-04-29 03:48:12,645 - INFO - Finished test: 45da4958-c0b9-484a-9572-5cdeba4b1d86, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py:20: assert False, Duration: 0.00029115400138834957
+2024-04-29 03:48:12,653 - INFO - Started test: test_examples[2-2]
+2024-04-29 03:48:12,653 - INFO - Test 'test_examples[2-2]' started with params: {'left': 2, 'right': 2}
+2024-04-29 03:48:12,654 - INFO - Test status: PASSED, Duration: 0.0002831190013239393
+2024-04-29 03:48:12,655 - INFO - 7a60c74f-fcd4-4cf4-9461-d631d2518c0d PASSED
+2024-04-29 03:48:12,665 - INFO - Finished test: 7a60c74f-fcd4-4cf4-9461-d631d2518c0d, Status: PASSED, Exception: None, Duration: 0.0002831190013239393
+2024-04-29 03:48:12,674 - INFO - Started test: test_examples[3.14-5.55]
+2024-04-29 03:48:12,674 - INFO - Test 'test_examples[3.14-5.55]' started with params: {'left': 3.14, 'right': 5.55}
+2024-04-29 03:48:12,675 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py', 5, 'Skipped: Skipped!')
+2024-04-29 03:48:12,675 - INFO - 3d3117e8-6976-453a-8dc7-8ac29c99d542 SKIPPED
+2024-04-29 03:48:12,685 - INFO - Finished test: 3d3117e8-6976-453a-8dc7-8ac29c99d542, Status: SKIPPED, Exception: None, Duration: None
+2024-04-29 03:48:12,694 - INFO - Started test: test_examples[nan-42]
+2024-04-29 03:48:12,695 - INFO - Test 'test_examples[nan-42]' started with params: {'left': nan, 'right': 42}
+2024-04-29 03:48:12,696 - INFO - Test status: FAILED, Duration: 0.00022439000167651102
+2024-04-29 03:48:12,696 - INFO - d2336d6d-c893-48fd-a27b-3281517fec7f FAILED
+2024-04-29 03:48:12,712 - INFO - Finished test: d2336d6d-c893-48fd-a27b-3281517fec7f, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py:14: assert (nan + 42) == (42 + nan), Duration: 0.00022439000167651102
+2024-04-29 03:48:12,732 - INFO - Started test: test_properties
+2024-04-29 03:48:12,732 - INFO - Test 'test_properties' started with params: {}
+2024-04-29 03:48:12,951 - INFO - Test status: FAILED, Duration: 0.2174061219993746
+2024-04-29 03:48:12,951 - INFO - e747df19-6045-4f50-9405-26fc841fdb2d FAILED
+2024-04-29 03:48:12,965 - INFO - Finished test: e747df19-6045-4f50-9405-26fc841fdb2d, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py:21: assert (0 + nan) == (nan + 0), Duration: 0.2174061219993746
+2024-04-29 03:48:12,971 - INFO - Test status: FAILED, Duration: 0.00029115400138834957
+2024-04-29 03:48:12,972 - INFO - Test status: FAILED, Duration: 0.00022439000167651102
+2024-04-29 03:48:12,972 - INFO - Test status: FAILED, Duration: 0.2174061219993746
+2024-04-29 03:48:12,987 - INFO - Test run finished
+2024-04-29 03:51:16,722 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:51:16,805 - INFO - <Response [400]>
+2024-04-29 03:51:16,805 - INFO - 220315db-2010-4bbd-9532-63ab570de329
+2024-04-29 03:51:16,805 - INFO - Test run started
+2024-04-29 03:51:17,144 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:51:17,165 - INFO - <Response [200]>
+2024-04-29 03:51:17,165 - INFO - 872445b6-8db2-47e0-aed1-b3065b9112c2
+2024-04-29 03:51:17,165 - INFO - Test run started
+2024-04-29 03:51:17,194 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:51:17,212 - INFO - <Response [200]>
+2024-04-29 03:51:17,212 - INFO - 7fe9227f-b77e-4c24-b438-f7b98b847c82
+2024-04-29 03:51:17,212 - INFO - Test run started
+2024-04-29 03:51:17,234 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:51:17,252 - INFO - <Response [200]>
+2024-04-29 03:51:17,252 - INFO - 5a0bf10c-8eda-4b81-be6d-150f956d9621
+2024-04-29 03:51:17,253 - INFO - Test run started
+2024-04-29 03:51:17,298 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:51:17,320 - INFO - <Response [200]>
+2024-04-29 03:51:17,320 - INFO - 7b103be3-d28e-4e5b-b79e-9e9d834fe7c9
+2024-04-29 03:51:17,320 - INFO - Test run started
+2024-04-29 03:51:17,343 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:51:17,356 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:51:17,364 - INFO - <Response [200]>
+2024-04-29 03:51:17,364 - INFO - 737acc6f-b319-4b9e-8aa2-830f09fa0181
+2024-04-29 03:51:17,364 - INFO - Test run started
+2024-04-29 03:51:17,375 - INFO - <Response [200]>
+2024-04-29 03:51:17,375 - INFO - 1c076a68-e4cd-46d5-bf0e-61c0f33d35ab
+2024-04-29 03:51:17,375 - INFO - Test run started
+2024-04-29 03:51:17,423 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:51:17,442 - INFO - <Response [200]>
+2024-04-29 03:51:17,442 - INFO - 579ca3cf-5d12-4474-a9bd-7393ff404f31
+2024-04-29 03:51:17,442 - INFO - Test run started
+2024-04-29 03:51:17,593 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:51:17,594 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:51:17,615 - INFO - <Response [200]>
+2024-04-29 03:51:17,615 - INFO - e47c47d8-6582-47a3-933b-b94ef5764498
+2024-04-29 03:51:17,615 - INFO - Test run started
+2024-04-29 03:51:17,625 - INFO - <Response [200]>
+2024-04-29 03:51:17,625 - INFO - d3909ae7-d6ea-4c7c-a906-b4d2c13de284
+2024-04-29 03:51:17,626 - INFO - Test run started
+2024-04-29 03:51:17,662 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:51:17,679 - INFO - <Response [200]>
+2024-04-29 03:51:17,679 - INFO - d155ac64-f742-4266-a92c-f91ed34c5d78
+2024-04-29 03:51:17,679 - INFO - Test run started
+2024-04-29 03:51:17,755 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:51:17,770 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:51:17,773 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:51:17,776 - INFO - <Response [200]>
+2024-04-29 03:51:17,776 - INFO - c3d71d86-7ead-46bd-b7c5-a1254d789f95
+2024-04-29 03:51:17,776 - INFO - Test run started
+2024-04-29 03:51:17,789 - INFO - <Response [200]>
+2024-04-29 03:51:17,789 - INFO - f9261170-cd45-496f-95ba-d9c8656ffd52
+2024-04-29 03:51:17,789 - INFO - Test run started
+2024-04-29 03:51:17,801 - INFO - <Response [200]>
+2024-04-29 03:51:17,801 - INFO - 653fa048-4e59-4f6c-aa70-8830f4ade109
+2024-04-29 03:51:17,801 - INFO - Test run started
+2024-04-29 03:51:17,820 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:51:17,840 - INFO - <Response [200]>
+2024-04-29 03:51:17,840 - INFO - f9a954ca-be5b-482e-bf42-f114ce5b58ec
+2024-04-29 03:51:17,841 - INFO - Test run started
+2024-04-29 03:51:17,892 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:51:17,911 - INFO - <Response [200]>
+2024-04-29 03:51:17,911 - INFO - 4c9f00e2-94bf-40f3-bc38-34b3fe0779d6
+2024-04-29 03:51:17,911 - INFO - Test run started
+2024-04-29 03:51:17,946 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:51:17,965 - INFO - <Response [200]>
+2024-04-29 03:51:17,966 - INFO - b117f36f-08af-451d-9044-2ce00b38e920
+2024-04-29 03:51:17,966 - INFO - Test run started
+2024-04-29 03:51:18,179 - INFO - Test run finished
+2024-04-29 03:51:18,190 - INFO - Test run finished
+2024-04-29 03:51:18,201 - INFO - Test run finished
+2024-04-29 03:51:18,210 - INFO - Test run finished
+2024-04-29 03:51:18,216 - INFO - Started test: test_passing
+2024-04-29 03:51:18,217 - INFO - Test 'test_passing' started with params: {}
+2024-04-29 03:51:18,219 - INFO - Test status: PASSED, Duration: 0.00034951999987242743
+2024-04-29 03:51:18,219 - INFO - c855c1d8-161d-4019-b15c-382b4ad8bce4 PASSED
+2024-04-29 03:51:18,219 - INFO - Test status: PASSED, Duration: 0.00034951999987242743
+2024-04-29 03:51:18,225 - INFO - Started test: test_skipped
+2024-04-29 03:51:18,225 - INFO - Test 'test_skipped' started with params: {}
+2024-04-29 03:51:18,226 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py', 10, 'Skipped: Test is skipped for a reason')
+2024-04-29 03:51:18,227 - INFO - 2152c356-50ef-445f-b8ca-a8fa1623fdc3 SKIPPED
+2024-04-29 03:51:18,227 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py', 10, 'Skipped: Test is skipped for a reason')
+2024-04-29 03:51:18,240 - INFO - Test run finished
+2024-04-29 03:51:18,249 - INFO - Started test: test_expected_failure
+2024-04-29 03:51:18,250 - INFO - Test 'test_expected_failure' started with params: {}
+2024-04-29 03:51:18,259 - INFO - Started test: test_error
+2024-04-29 03:51:18,259 - INFO - Test 'test_error' started with params: {}
+2024-04-29 03:51:18,261 - INFO - Test status: PASSED, Duration: 0.00041846900057862513
+2024-04-29 03:51:18,261 - INFO - 2fedf796-2fce-48fe-ac43-fdb31d8f61db PASSED
+2024-04-29 03:51:18,261 - INFO - Test status: PASSED, Duration: 0.00041846900057862513
+2024-04-29 03:51:18,267 - INFO - Started test: test_examples[nan-42]
+2024-04-29 03:51:18,267 - INFO - Test 'test_examples[nan-42]' started with params: {'left': nan, 'right': 42}
+2024-04-29 03:51:18,276 - INFO - Test status: SKIPPED, Duration: 0.0003505670010781614
+2024-04-29 03:51:18,277 - INFO - 36198a20-0c55-4642-9f53-c031f9f39686 SKIPPED
+2024-04-29 03:51:18,277 - INFO - Started test: test_examples[2-2]
+2024-04-29 03:51:18,277 - INFO - Test 'test_examples[2-2]' started with params: {'left': 2, 'right': 2}
+2024-04-29 03:51:18,278 - INFO - Test status: SKIPPED, Duration: 0.0003505670010781614
+2024-04-29 03:51:18,280 - INFO - Test status: PASSED, Duration: 0.00037042800067865755
+2024-04-29 03:51:18,280 - INFO - 2a829aed-6817-4c6b-9668-83f5e21edbaf PASSED
+2024-04-29 03:51:18,281 - INFO - Test status: PASSED, Duration: 0.00037042800067865755
+2024-04-29 03:51:18,285 - INFO - Started test: test_unexpected_failure
+2024-04-29 03:51:18,285 - INFO - Test 'test_unexpected_failure' started with params: {}
+2024-04-29 03:51:18,294 - INFO - Test run finished
+2024-04-29 03:51:18,297 - INFO - Test status: FAILED, Duration: 0.0005123260016262066
+2024-04-29 03:51:18,298 - INFO - f4a1558f-ffce-496c-bbad-d6ee9cb648b5 FAILED
+2024-04-29 03:51:18,298 - INFO - Test status: FAILED, Duration: 0.0005123260016262066
+2024-04-29 03:51:18,302 - INFO - Started test: test_properties
+2024-04-29 03:51:18,303 - INFO - Test 'test_properties' started with params: {}
+2024-04-29 03:51:18,314 - INFO - Test status: FAILED, Duration: 0.0005072639996797079
+2024-04-29 03:51:18,315 - INFO - 1cc3fd34-42d0-4444-9a2c-d1d9396e45ba FAILED
+2024-04-29 03:51:18,315 - INFO - Test status: FAILED, Duration: 0.0005072639996797079
+2024-04-29 03:51:18,316 - INFO - Test run finished
+2024-04-29 03:51:18,326 - INFO - Started test: test_examples[3.14-5.55]
+2024-04-29 03:51:18,326 - INFO - Test 'test_examples[3.14-5.55]' started with params: {'left': 3.14, 'right': 5.55}
+2024-04-29 03:51:18,328 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py', 5, 'Skipped: Skipped!')
+2024-04-29 03:51:18,329 - INFO - 2f7b9715-bffa-427f-8a78-df953b5a5a24 SKIPPED
+2024-04-29 03:51:18,329 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py', 5, 'Skipped: Skipped!')
+2024-04-29 03:51:18,337 - INFO - Finished test: c855c1d8-161d-4019-b15c-382b4ad8bce4, Status: PASSED, Exception: None, Duration: 0.00034951999987242743
+2024-04-29 03:51:18,351 - INFO - Finished test: 2152c356-50ef-445f-b8ca-a8fa1623fdc3, Status: SKIPPED, Exception: None, Duration: None
+2024-04-29 03:51:18,360 - INFO - Finished test: 2fedf796-2fce-48fe-ac43-fdb31d8f61db, Status: PASSED, Exception: None, Duration: 0.00041846900057862513
+2024-04-29 03:51:18,369 - INFO - Finished test: 36198a20-0c55-4642-9f53-c031f9f39686, Status: SKIPPED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py:17: assert False, Duration: 0.0003505670010781614
+2024-04-29 03:51:18,380 - INFO - Finished test: 2a829aed-6817-4c6b-9668-83f5e21edbaf, Status: PASSED, Exception: None, Duration: 0.00037042800067865755
+2024-04-29 03:51:18,391 - INFO - Finished test: f4a1558f-ffce-496c-bbad-d6ee9cb648b5, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py:14: assert (nan + 42) == (42 + nan), Duration: 0.0005123260016262066
+2024-04-29 03:51:18,393 - INFO - Test status: FAILED, Duration: 0.0005123260016262066
+2024-04-29 03:51:18,403 - INFO - Finished test: 1cc3fd34-42d0-4444-9a2c-d1d9396e45ba, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py:20: assert False, Duration: 0.0005072639996797079
+2024-04-29 03:51:18,405 - INFO - Test status: FAILED, Duration: 0.0005072639996797079
+2024-04-29 03:51:18,413 - INFO - Finished test: 2f7b9715-bffa-427f-8a78-df953b5a5a24, Status: SKIPPED, Exception: None, Duration: None
+2024-04-29 03:51:18,424 - INFO - Test run finished
+2024-04-29 03:51:18,432 - INFO - Test run finished
+2024-04-29 03:51:18,442 - INFO - Test run finished
+2024-04-29 03:51:18,452 - INFO - Test run finished
+2024-04-29 03:51:18,461 - INFO - Test run finished
+2024-04-29 03:51:18,471 - INFO - Test run finished
+2024-04-29 03:51:18,481 - INFO - Test run finished
+2024-04-29 03:51:18,491 - INFO - Test run finished
+2024-04-29 03:51:18,799 - INFO - Test status: FAILED, Duration: 0.49279214200032584
+2024-04-29 03:51:18,800 - INFO - 231f79b4-c577-479a-8282-b87f34d224ee FAILED
+2024-04-29 03:51:18,801 - INFO - Test status: FAILED, Duration: 0.49279214200032584
+2024-04-29 03:51:18,817 - INFO - Finished test: 231f79b4-c577-479a-8282-b87f34d224ee, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py:21: assert (0 + nan) == (nan + 0), Duration: 0.49279214200032584
+2024-04-29 03:51:18,821 - INFO - Test status: FAILED, Duration: 0.49279214200032584
+2024-04-29 03:51:18,854 - INFO - Test run finished
+2024-04-29 03:51:19,244 - INFO - Test status: FAILED, Duration: 0.0005123260016262066
+2024-04-29 03:51:19,245 - INFO - Test status: FAILED, Duration: 0.0005072639996797079
+2024-04-29 03:51:19,245 - INFO - Test status: FAILED, Duration: 0.49279214200032584
+2024-04-29 03:51:19,253 - INFO - Test run finished
+2024-04-29 03:52:43,465 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:52:43,496 - INFO - <Response [200]>
+2024-04-29 03:52:43,496 - INFO - 97a473f7-5eb9-477c-b7a9-9617356d637c
+2024-04-29 03:52:43,497 - INFO - Test run started
+2024-04-29 03:52:43,701 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:52:43,721 - INFO - <Response [200]>
+2024-04-29 03:52:43,721 - INFO - 6cee8402-55fa-423c-a75d-4d620dc360ca
+2024-04-29 03:52:43,721 - INFO - Test run started
+2024-04-29 03:52:43,749 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:52:43,766 - INFO - <Response [200]>
+2024-04-29 03:52:43,766 - INFO - 9ffcb16f-752b-4c93-8a70-5ad6c016e461
+2024-04-29 03:52:43,767 - INFO - Test run started
+2024-04-29 03:52:43,935 - INFO - Started test: test_skipped
+2024-04-29 03:52:43,935 - INFO - Test 'test_skipped' started with params: {}
+2024-04-29 03:52:43,936 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py', 10, 'Skipped: Test is skipped for a reason')
+2024-04-29 03:52:43,936 - INFO - 08a365aa-ebba-48b5-95dc-db892531e23c SKIPPED
+2024-04-29 03:52:43,937 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py', 10, 'Skipped: Test is skipped for a reason')
+2024-04-29 03:52:43,945 - INFO - Started test: test_passing
+2024-04-29 03:52:43,945 - INFO - Test 'test_passing' started with params: {}
+2024-04-29 03:52:43,947 - INFO - Test status: PASSED, Duration: 0.0003334889988764189
+2024-04-29 03:52:43,947 - INFO - 17a3c443-31cd-407a-a38b-1983f9372fd2 PASSED
+2024-04-29 03:52:43,948 - INFO - Test status: PASSED, Duration: 0.0003334889988764189
+2024-04-29 03:52:43,960 - INFO - Finished test: 08a365aa-ebba-48b5-95dc-db892531e23c, Status: SKIPPED, Exception: None, Duration: None
+2024-04-29 03:52:43,973 - INFO - Finished test: 17a3c443-31cd-407a-a38b-1983f9372fd2, Status: PASSED, Exception: None, Duration: 0.0003334889988764189
+2024-04-29 03:52:43,982 - INFO - Started test: test_expected_failure
+2024-04-29 03:52:43,982 - INFO - Test 'test_expected_failure' started with params: {}
+2024-04-29 03:52:43,990 - INFO - Started test: test_error
+2024-04-29 03:52:43,990 - INFO - Test 'test_error' started with params: {}
+2024-04-29 03:52:43,991 - INFO - Test status: PASSED, Duration: 0.0003239680008846335
+2024-04-29 03:52:43,992 - INFO - 4555fbab-3b7b-48ed-bf6e-364553c1857d PASSED
+2024-04-29 03:52:43,992 - INFO - Test status: PASSED, Duration: 0.0003239680008846335
+2024-04-29 03:52:44,006 - INFO - Finished test: 4555fbab-3b7b-48ed-bf6e-364553c1857d, Status: PASSED, Exception: None, Duration: 0.0003239680008846335
+2024-04-29 03:52:44,010 - INFO - Test status: SKIPPED, Duration: 0.00048216300092462916
+2024-04-29 03:52:44,010 - INFO - c5eeed7a-e2ff-43a0-bfdf-f3cf1189e051 SKIPPED
+2024-04-29 03:52:44,011 - INFO - Test status: SKIPPED, Duration: 0.00048216300092462916
+2024-04-29 03:52:44,019 - INFO - Started test: test_examples[2-2]
+2024-04-29 03:52:44,020 - INFO - Test 'test_examples[2-2]' started with params: {'left': 2, 'right': 2}
+2024-04-29 03:52:44,021 - INFO - Test status: PASSED, Duration: 0.00028989500060561113
+2024-04-29 03:52:44,021 - INFO - fbd107c7-e36c-45b1-86b8-cecb4bda372c PASSED
+2024-04-29 03:52:44,022 - INFO - Test status: PASSED, Duration: 0.00028989500060561113
+2024-04-29 03:52:44,031 - INFO - Finished test: c5eeed7a-e2ff-43a0-bfdf-f3cf1189e051, Status: SKIPPED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py:17: assert False, Duration: 0.00048216300092462916
+2024-04-29 03:52:44,043 - INFO - Finished test: fbd107c7-e36c-45b1-86b8-cecb4bda372c, Status: PASSED, Exception: None, Duration: 0.00028989500060561113
+2024-04-29 03:52:44,054 - INFO - Started test: test_unexpected_failure
+2024-04-29 03:52:44,055 - INFO - Test 'test_unexpected_failure' started with params: {}
+2024-04-29 03:52:44,059 - INFO - Test status: FAILED, Duration: 0.00046912899961171206
+2024-04-29 03:52:44,059 - INFO - ca6a402f-adb1-4ec3-88be-c531e3dce411 FAILED
+2024-04-29 03:52:44,060 - INFO - Test status: FAILED, Duration: 0.00046912899961171206
+2024-04-29 03:52:44,062 - INFO - Started test: test_examples[3.14-5.55]
+2024-04-29 03:52:44,063 - INFO - Test 'test_examples[3.14-5.55]' started with params: {'left': 3.14, 'right': 5.55}
+2024-04-29 03:52:44,064 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py', 5, 'Skipped: Skipped!')
+2024-04-29 03:52:44,064 - INFO - 1bee5b40-9a6e-42f1-8d01-3f9eab3a7a00 SKIPPED
+2024-04-29 03:52:44,064 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py', 5, 'Skipped: Skipped!')
+2024-04-29 03:52:44,074 - INFO - Finished test: ca6a402f-adb1-4ec3-88be-c531e3dce411, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py:20: assert False, Duration: 0.00046912899961171206
+2024-04-29 03:52:44,084 - INFO - Finished test: 1bee5b40-9a6e-42f1-8d01-3f9eab3a7a00, Status: SKIPPED, Exception: None, Duration: None
+2024-04-29 03:52:44,094 - INFO - Started test: test_examples[nan-42]
+2024-04-29 03:52:44,094 - INFO - Test 'test_examples[nan-42]' started with params: {'left': nan, 'right': 42}
+2024-04-29 03:52:44,099 - INFO - Test status: FAILED, Duration: 0.0006864000006316928
+2024-04-29 03:52:44,100 - INFO - 967681bb-7a26-4a50-9463-4c6767740eb3 FAILED
+2024-04-29 03:52:44,100 - INFO - Test status: FAILED, Duration: 0.0006864000006316928
+2024-04-29 03:52:44,103 - INFO - Started test: test_properties
+2024-04-29 03:52:44,104 - INFO - Test 'test_properties' started with params: {}
+2024-04-29 03:52:44,114 - INFO - Finished test: 967681bb-7a26-4a50-9463-4c6767740eb3, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py:14: assert (nan + 42) == (42 + nan), Duration: 0.0006864000006316928
+2024-04-29 03:52:44,116 - INFO - Test status: FAILED, Duration: 0.00046912899961171206
+2024-04-29 03:52:44,116 - INFO - Test status: FAILED, Duration: 0.0006864000006316928
+2024-04-29 03:52:44,131 - INFO - Test run finished
+2024-04-29 03:52:44,566 - INFO - Test status: FAILED, Duration: 0.4597559369994997
+2024-04-29 03:52:44,567 - INFO - fdcc601a-254d-4bc2-b2aa-c5fd2f2faa62 FAILED
+2024-04-29 03:52:44,568 - INFO - Test status: FAILED, Duration: 0.4597559369994997
+2024-04-29 03:52:44,582 - INFO - Finished test: fdcc601a-254d-4bc2-b2aa-c5fd2f2faa62, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py:21: assert (0 + nan) == (nan + 0), Duration: 0.4597559369994997
+2024-04-29 03:52:44,586 - INFO - Test status: FAILED, Duration: 0.4597559369994997
+2024-04-29 03:52:44,598 - INFO - Test run finished
+2024-04-29 03:52:44,826 - INFO - Test status: FAILED, Duration: 0.00046912899961171206
+2024-04-29 03:52:44,826 - INFO - Test status: FAILED, Duration: 0.0006864000006316928
+2024-04-29 03:52:44,826 - INFO - Test status: FAILED, Duration: 0.4597559369994997
+2024-04-29 03:52:44,842 - INFO - Test run finished
+2024-04-29 03:53:04,872 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:53:04,902 - INFO - <Response [200]>
+2024-04-29 03:53:04,902 - INFO - d78ae850-b1ee-40f8-927e-99cc1d18bbb1
+2024-04-29 03:53:04,902 - INFO - Test run started
+2024-04-29 03:53:05,231 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:53:05,248 - INFO - <Response [200]>
+2024-04-29 03:53:05,248 - INFO - ce707be1-d858-4a9e-8297-170757eb2b23
+2024-04-29 03:53:05,249 - INFO - Test run started
+2024-04-29 03:53:05,268 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:53:05,287 - INFO - <Response [200]>
+2024-04-29 03:53:05,288 - INFO - c3f5f89d-4e4c-4ec8-92d1-a12eb6144a67
+2024-04-29 03:53:05,288 - INFO - Test run started
+2024-04-29 03:53:05,318 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:53:05,337 - INFO - <Response [200]>
+2024-04-29 03:53:05,337 - INFO - 9a7ee4b4-776d-47e4-8844-4598636c5b06
+2024-04-29 03:53:05,337 - INFO - Test run started
+2024-04-29 03:53:05,519 - INFO - Started test: test_unexpected_failure
+2024-04-29 03:53:05,520 - INFO - Test 'test_unexpected_failure' started with params: {}
+2024-04-29 03:53:05,528 - INFO - Started test: test_passing
+2024-04-29 03:53:05,528 - INFO - Test 'test_passing' started with params: {}
+2024-04-29 03:53:05,531 - INFO - Test status: PASSED, Duration: 0.0004107000004296424
+2024-04-29 03:53:05,531 - INFO - c0fcc6c2-8e45-4808-a222-93b478c32c58 PASSED
+2024-04-29 03:53:05,531 - INFO - Test status: PASSED, Duration: 0.0004107000004296424
+2024-04-29 03:53:05,535 - INFO - Started test: test_skipped
+2024-04-29 03:53:05,536 - INFO - Test 'test_skipped' started with params: {}
+2024-04-29 03:53:05,537 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py', 10, 'Skipped: Test is skipped for a reason')
+2024-04-29 03:53:05,538 - INFO - 02a8d3c7-cfc9-482d-bff3-0508e94ba8bb SKIPPED
+2024-04-29 03:53:05,538 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py', 10, 'Skipped: Test is skipped for a reason')
+2024-04-29 03:53:05,548 - INFO - Test status: FAILED, Duration: 0.0006616509999730624
+2024-04-29 03:53:05,549 - INFO - Finished test: c0fcc6c2-8e45-4808-a222-93b478c32c58, Status: PASSED, Exception: None, Duration: 0.0004107000004296424
+2024-04-29 03:53:05,549 - INFO - 9acc0317-040d-41f7-b596-b92917532436 FAILED
+2024-04-29 03:53:05,550 - INFO - Test status: FAILED, Duration: 0.0006616509999730624
+2024-04-29 03:53:05,561 - INFO - Finished test: 02a8d3c7-cfc9-482d-bff3-0508e94ba8bb, Status: SKIPPED, Exception: None, Duration: None
+2024-04-29 03:53:05,574 - INFO - Finished test: 9acc0317-040d-41f7-b596-b92917532436, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py:20: assert False, Duration: 0.0006616509999730624
+2024-04-29 03:53:05,582 - INFO - Started test: test_error
+2024-04-29 03:53:05,583 - INFO - Test 'test_error' started with params: {}
+2024-04-29 03:53:05,584 - INFO - Test status: PASSED, Duration: 0.00047271299990825355
+2024-04-29 03:53:05,585 - INFO - 945db966-faf5-4647-9f4a-c22c8aca3a69 PASSED
+2024-04-29 03:53:05,585 - INFO - Test status: PASSED, Duration: 0.00047271299990825355
+2024-04-29 03:53:05,591 - INFO - Started test: test_expected_failure
+2024-04-29 03:53:05,591 - INFO - Test 'test_expected_failure' started with params: {}
+2024-04-29 03:53:05,599 - INFO - Started test: test_examples[2-2]
+2024-04-29 03:53:05,599 - INFO - Test 'test_examples[2-2]' started with params: {'left': 2, 'right': 2}
+2024-04-29 03:53:05,601 - INFO - Test status: PASSED, Duration: 0.0004592650002450682
+2024-04-29 03:53:05,601 - INFO - 5a92930c-990d-46d2-bba6-99776f79c605 PASSED
+2024-04-29 03:53:05,601 - INFO - Test status: PASSED, Duration: 0.0004592650002450682
+2024-04-29 03:53:05,609 - INFO - Finished test: 945db966-faf5-4647-9f4a-c22c8aca3a69, Status: PASSED, Exception: None, Duration: 0.00047271299990825355
+2024-04-29 03:53:05,618 - INFO - Test status: SKIPPED, Duration: 0.0005310679989634082
+2024-04-29 03:53:05,619 - INFO - c96cfa2f-2103-4b5f-b14d-af9f2dd8eec4 SKIPPED
+2024-04-29 03:53:05,619 - INFO - Test status: SKIPPED, Duration: 0.0005310679989634082
+2024-04-29 03:53:05,619 - INFO - Finished test: 5a92930c-990d-46d2-bba6-99776f79c605, Status: PASSED, Exception: None, Duration: 0.0004592650002450682
+2024-04-29 03:53:05,628 - INFO - Started test: test_examples[3.14-5.55]
+2024-04-29 03:53:05,628 - INFO - Test 'test_examples[3.14-5.55]' started with params: {'left': 3.14, 'right': 5.55}
+2024-04-29 03:53:05,629 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py', 5, 'Skipped: Skipped!')
+2024-04-29 03:53:05,630 - INFO - 7b9d24da-8c3f-400e-8bd4-7450275d396d SKIPPED
+2024-04-29 03:53:05,630 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py', 5, 'Skipped: Skipped!')
+2024-04-29 03:53:05,640 - INFO - Finished test: c96cfa2f-2103-4b5f-b14d-af9f2dd8eec4, Status: SKIPPED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py:17: assert False, Duration: 0.0005310679989634082
+2024-04-29 03:53:05,650 - INFO - Started test: test_properties
+2024-04-29 03:53:05,650 - INFO - Test 'test_properties' started with params: {}
+2024-04-29 03:53:05,661 - INFO - Finished test: 7b9d24da-8c3f-400e-8bd4-7450275d396d, Status: SKIPPED, Exception: None, Duration: None
+2024-04-29 03:53:05,672 - INFO - Started test: test_examples[nan-42]
+2024-04-29 03:53:05,672 - INFO - Test 'test_examples[nan-42]' started with params: {'left': nan, 'right': 42}
+2024-04-29 03:53:05,676 - INFO - Test status: FAILED, Duration: 0.0010554359996604035
+2024-04-29 03:53:05,677 - INFO - b17cc7a7-fc7d-45d6-8582-57b6fd10e859 FAILED
+2024-04-29 03:53:05,678 - INFO - Test status: FAILED, Duration: 0.0010554359996604035
+2024-04-29 03:53:05,682 - INFO - Test run finished
+2024-04-29 03:53:05,694 - INFO - Finished test: b17cc7a7-fc7d-45d6-8582-57b6fd10e859, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py:14: assert (nan + 42) == (42 + nan), Duration: 0.0010554359996604035
+2024-04-29 03:53:05,696 - INFO - Test status: FAILED, Duration: 0.0010554359996604035
+2024-04-29 03:53:05,711 - INFO - Test run finished
+2024-04-29 03:53:06,091 - INFO - Test status: FAILED, Duration: 0.43739131599977554
+2024-04-29 03:53:06,092 - INFO - 57c83309-934f-4da5-a136-a4ce4b7315e3 FAILED
+2024-04-29 03:53:06,093 - INFO - Test status: FAILED, Duration: 0.43739131599977554
+2024-04-29 03:53:06,107 - INFO - Finished test: 57c83309-934f-4da5-a136-a4ce4b7315e3, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py:21: assert (0 + nan) == (nan + 0), Duration: 0.43739131599977554
+2024-04-29 03:53:06,111 - INFO - Test status: FAILED, Duration: 0.0006616509999730624
+2024-04-29 03:53:06,111 - INFO - Test status: FAILED, Duration: 0.43739131599977554
+2024-04-29 03:53:06,124 - INFO - Test run finished
+2024-04-29 03:53:06,331 - INFO - Test status: FAILED, Duration: 0.0006616509999730624
+2024-04-29 03:53:06,331 - INFO - Test status: FAILED, Duration: 0.0010554359996604035
+2024-04-29 03:53:06,332 - INFO - Test status: FAILED, Duration: 0.43739131599977554
+2024-04-29 03:53:06,349 - INFO - Test run finished
+2024-04-29 03:53:57,534 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:53:57,552 - INFO - <Response [200]>
+2024-04-29 03:53:57,552 - INFO - 891b8b6d-f9f5-46fa-a9be-0a43bbf15f80
+2024-04-29 03:53:57,552 - INFO - Test run started
+2024-04-29 03:53:57,757 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:53:57,776 - INFO - <Response [200]>
+2024-04-29 03:53:57,776 - INFO - d262c042-a694-4381-818c-4bfafc94db44
+2024-04-29 03:53:57,777 - INFO - Test run started
+2024-04-29 03:53:57,800 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:53:57,817 - INFO - <Response [200]>
+2024-04-29 03:53:57,818 - INFO - 1ec135fc-ffb2-4268-b54a-4ae0953d599b
+2024-04-29 03:53:57,818 - INFO - Test run started
+2024-04-29 03:53:57,838 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:53:57,855 - INFO - <Response [200]>
+2024-04-29 03:53:57,855 - INFO - 0f5b2c14-b5b2-4f07-83d0-81055697678d
+2024-04-29 03:53:57,855 - INFO - Test run started
+2024-04-29 03:53:57,894 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:53:57,911 - INFO - <Response [200]>
+2024-04-29 03:53:57,911 - INFO - 9f6a0049-5a97-46af-a4b3-3a62d3d81ad7
+2024-04-29 03:53:57,911 - INFO - Test run started
+2024-04-29 03:53:58,094 - INFO - Started test: test_examples[3.14-5.55]
+2024-04-29 03:53:58,095 - INFO - Test 'test_examples[3.14-5.55]' started with params: {'left': 3.14, 'right': 5.55}
+2024-04-29 03:53:58,096 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py', 5, 'Skipped: Skipped!')
+2024-04-29 03:53:58,096 - INFO - ef7416e5-edef-44fd-b8ed-d75716421ffd SKIPPED
+2024-04-29 03:53:58,097 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py', 5, 'Skipped: Skipped!')
+2024-04-29 03:53:58,105 - INFO - Started test: test_skipped
+2024-04-29 03:53:58,105 - INFO - Test 'test_skipped' started with params: {}
+2024-04-29 03:53:58,106 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py', 10, 'Skipped: Test is skipped for a reason')
+2024-04-29 03:53:58,107 - INFO - af5030ae-4278-4b5b-bea0-34e9e77bb7be SKIPPED
+2024-04-29 03:53:58,107 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py', 10, 'Skipped: Test is skipped for a reason')
+2024-04-29 03:53:58,115 - INFO - Started test: test_unexpected_failure
+2024-04-29 03:53:58,115 - INFO - Test 'test_unexpected_failure' started with params: {}
+2024-04-29 03:53:58,124 - INFO - Started test: test_passing
+2024-04-29 03:53:58,125 - INFO - Test 'test_passing' started with params: {}
+2024-04-29 03:53:58,127 - INFO - Test status: PASSED, Duration: 0.00039828499939176254
+2024-04-29 03:53:58,128 - INFO - 1c77e675-6fe4-4990-ac21-2f4ad7b9c268 PASSED
+2024-04-29 03:53:58,128 - INFO - Test status: PASSED, Duration: 0.00039828499939176254
+2024-04-29 03:53:58,135 - INFO - Finished test: ef7416e5-edef-44fd-b8ed-d75716421ffd, Status: SKIPPED, Exception: None, Duration: None
+2024-04-29 03:53:58,143 - INFO - Test status: FAILED, Duration: 0.00045806799971614964
+2024-04-29 03:53:58,144 - INFO - dbb85299-ce94-48c0-a448-49f52ee5f2ce FAILED
+2024-04-29 03:53:58,145 - INFO - Test status: FAILED, Duration: 0.00045806799971614964
+2024-04-29 03:53:58,145 - INFO - Finished test: af5030ae-4278-4b5b-bea0-34e9e77bb7be, Status: SKIPPED, Exception: None, Duration: None
+2024-04-29 03:53:58,155 - INFO - Finished test: 1c77e675-6fe4-4990-ac21-2f4ad7b9c268, Status: PASSED, Exception: None, Duration: 0.00039828499939176254
+2024-04-29 03:53:58,164 - INFO - Started test: test_examples[nan-42]
+2024-04-29 03:53:58,164 - INFO - Test 'test_examples[nan-42]' started with params: {'left': nan, 'right': 42}
+2024-04-29 03:53:58,174 - INFO - Finished test: dbb85299-ce94-48c0-a448-49f52ee5f2ce, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py:20: assert False, Duration: 0.00045806799971614964
+2024-04-29 03:53:58,183 - INFO - Started test: test_expected_failure
+2024-04-29 03:53:58,183 - INFO - Test 'test_expected_failure' started with params: {}
+2024-04-29 03:53:58,191 - INFO - Started test: test_error
+2024-04-29 03:53:58,191 - INFO - Test 'test_error' started with params: {}
+2024-04-29 03:53:58,193 - INFO - Test status: PASSED, Duration: 0.0005140350003784988
+2024-04-29 03:53:58,194 - INFO - Test status: FAILED, Duration: 0.0006641139989369549
+2024-04-29 03:53:58,194 - INFO - 63b7437e-8fe9-4024-8aef-246a56e6d20d PASSED
+2024-04-29 03:53:58,194 - INFO - Test status: PASSED, Duration: 0.0005140350003784988
+2024-04-29 03:53:58,195 - INFO - 2f450f0a-3a21-45e6-bac2-4ecd883a6a82 FAILED
+2024-04-29 03:53:58,195 - INFO - Test status: FAILED, Duration: 0.0006641139989369549
+2024-04-29 03:53:58,199 - INFO - Started test: test_examples[2-2]
+2024-04-29 03:53:58,199 - INFO - Test 'test_examples[2-2]' started with params: {'left': 2, 'right': 2}
+2024-04-29 03:53:58,201 - INFO - Test status: PASSED, Duration: 0.0003471689997240901
+2024-04-29 03:53:58,202 - INFO - 01d53163-1731-4868-92e3-ed18f1b0fc48 PASSED
+2024-04-29 03:53:58,202 - INFO - Test status: PASSED, Duration: 0.0003471689997240901
+2024-04-29 03:53:58,209 - INFO - Finished test: 63b7437e-8fe9-4024-8aef-246a56e6d20d, Status: PASSED, Exception: None, Duration: 0.0005140350003784988
+2024-04-29 03:53:58,213 - INFO - Test status: SKIPPED, Duration: 0.00047629100117774215
+2024-04-29 03:53:58,214 - INFO - 272590b6-0085-45c7-bb33-ddd1a5ad6ca1 SKIPPED
+2024-04-29 03:53:58,215 - INFO - Test status: SKIPPED, Duration: 0.00047629100117774215
+2024-04-29 03:53:58,222 - INFO - Finished test: 2f450f0a-3a21-45e6-bac2-4ecd883a6a82, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py:14: assert (nan + 42) == (42 + nan), Duration: 0.0006641139989369549
+2024-04-29 03:53:58,236 - INFO - Finished test: 01d53163-1731-4868-92e3-ed18f1b0fc48, Status: PASSED, Exception: None, Duration: 0.0003471689997240901
+2024-04-29 03:53:58,238 - INFO - Test status: FAILED, Duration: 0.00045806799971614964
+2024-04-29 03:53:58,246 - INFO - Test run finished
+2024-04-29 03:53:58,258 - INFO - Finished test: 272590b6-0085-45c7-bb33-ddd1a5ad6ca1, Status: SKIPPED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py:17: assert False, Duration: 0.00047629100117774215
+2024-04-29 03:53:58,270 - INFO - Started test: test_properties
+2024-04-29 03:53:58,270 - INFO - Test 'test_properties' started with params: {}
+2024-04-29 03:53:58,282 - INFO - Test run finished
+2024-04-29 03:53:58,293 - INFO - Test run finished
+2024-04-29 03:53:58,709 - INFO - Test status: FAILED, Duration: 0.4355290759995114
+2024-04-29 03:53:58,710 - INFO - bfa434db-c7ee-4f03-90ed-b7b29338e7f4 FAILED
+2024-04-29 03:53:58,711 - INFO - Test status: FAILED, Duration: 0.4355290759995114
+2024-04-29 03:53:58,727 - INFO - Finished test: bfa434db-c7ee-4f03-90ed-b7b29338e7f4, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py:21: assert (0 + nan) == (nan + 0), Duration: 0.4355290759995114
+2024-04-29 03:53:58,731 - INFO - Test status: FAILED, Duration: 0.0006641139989369549
+2024-04-29 03:53:58,732 - INFO - Test status: FAILED, Duration: 0.4355290759995114
+2024-04-29 03:53:58,746 - INFO - Test run finished
+2024-04-29 03:53:58,972 - INFO - Test status: FAILED, Duration: 0.00045806799971614964
+2024-04-29 03:53:58,972 - INFO - Test status: FAILED, Duration: 0.0006641139989369549
+2024-04-29 03:53:58,972 - INFO - Test status: FAILED, Duration: 0.4355290759995114
+2024-04-29 03:53:58,990 - INFO - Test run finished
+2024-04-29 03:58:32,364 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:58:32,383 - INFO - <Response [200]>
+2024-04-29 03:58:32,383 - INFO - 3da0a801-baea-4c5b-a966-0fad6630ec03
+2024-04-29 03:58:32,383 - INFO - Test run started
+2024-04-29 03:58:32,592 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:58:32,607 - INFO - <Response [200]>
+2024-04-29 03:58:32,607 - INFO - 6bf6ce55-bbe2-4f6a-bfca-8c0d1f393b7e
+2024-04-29 03:58:32,607 - INFO - Test run started
+2024-04-29 03:58:32,634 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:58:32,652 - INFO - <Response [200]>
+2024-04-29 03:58:32,652 - INFO - 03e8cca0-be17-47f4-901c-38833a353abf
+2024-04-29 03:58:32,652 - INFO - Test run started
+2024-04-29 03:58:32,662 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:58:32,678 - INFO - <Response [200]>
+2024-04-29 03:58:32,678 - INFO - 18cec5c4-e5a7-4908-ae57-394908a58817
+2024-04-29 03:58:32,678 - INFO - Test run started
+2024-04-29 03:58:32,752 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:58:32,760 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:58:32,772 - INFO - <Response [200]>
+2024-04-29 03:58:32,772 - INFO - ec73b13b-2f2a-403d-bbb1-d1d2181bf1d2
+2024-04-29 03:58:32,772 - INFO - Test run started
+2024-04-29 03:58:32,782 - INFO - <Response [200]>
+2024-04-29 03:58:32,783 - INFO - 3ba4c617-15eb-4387-9c21-938d862af58b
+2024-04-29 03:58:32,783 - INFO - Test run started
+2024-04-29 03:58:32,785 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:58:32,816 - INFO - <Response [200]>
+2024-04-29 03:58:32,816 - INFO - 56fa2fd0-79d4-444c-9b39-93f9bbf0699b
+2024-04-29 03:58:32,816 - INFO - Test run started
+2024-04-29 03:58:32,823 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:58:32,839 - INFO - <Response [200]>
+2024-04-29 03:58:32,839 - INFO - a571fc9a-b4e8-4480-a966-02b91793f328
+2024-04-29 03:58:32,839 - INFO - Test run started
+2024-04-29 03:58:32,957 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:58:32,961 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:58:32,977 - INFO - <Response [200]>
+2024-04-29 03:58:32,977 - INFO - 1624fb39-aa0d-4325-b6d6-77887325faed
+2024-04-29 03:58:32,977 - INFO - Test run started
+2024-04-29 03:58:32,981 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:58:32,987 - INFO - <Response [200]>
+2024-04-29 03:58:32,988 - INFO - 237be0bc-19a0-420e-8881-0bd29d0898c9
+2024-04-29 03:58:32,988 - INFO - Test run started
+2024-04-29 03:58:33,001 - INFO - <Response [200]>
+2024-04-29 03:58:33,001 - INFO - 6cfe62d1-d1d3-478a-a3c8-90c0aa169adb
+2024-04-29 03:58:33,002 - INFO - Test run started
+2024-04-29 03:58:33,051 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:58:33,060 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:58:33,068 - INFO - <Response [200]>
+2024-04-29 03:58:33,068 - INFO - 9b47f6ea-7a3f-4518-b403-81e3efdf7e60
+2024-04-29 03:58:33,069 - INFO - Test run started
+2024-04-29 03:58:33,078 - INFO - <Response [200]>
+2024-04-29 03:58:33,078 - INFO - 5035aea7-906c-475f-a480-cef4f9348214
+2024-04-29 03:58:33,078 - INFO - Test run started
+2024-04-29 03:58:33,100 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:58:33,116 - INFO - <Response [200]>
+2024-04-29 03:58:33,116 - INFO - 70b06c41-3bbe-4ed7-a237-bb5467b1eb8d
+2024-04-29 03:58:33,116 - INFO - Test run started
+2024-04-29 03:58:33,151 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:58:33,152 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:58:33,166 - INFO - <Response [200]>
+2024-04-29 03:58:33,166 - INFO - a87970b4-3684-4789-8534-a79b35e21c13
+2024-04-29 03:58:33,167 - INFO - Test run started
+2024-04-29 03:58:33,176 - INFO - <Response [200]>
+2024-04-29 03:58:33,176 - INFO - 2ba53b8e-fab6-4cbb-892e-f134099bb7d2
+2024-04-29 03:58:33,176 - INFO - Test run started
+2024-04-29 03:58:33,185 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 03:58:33,199 - INFO - <Response [200]>
+2024-04-29 03:58:33,199 - INFO - 30c3eaed-7ffc-4a80-a5ec-144870f2c2fd
+2024-04-29 03:58:33,199 - INFO - Test run started
+2024-04-29 03:58:33,302 - INFO - Started test: test_expected_failure
+2024-04-29 03:58:33,302 - INFO - Test 'test_expected_failure' started with params: {}
+2024-04-29 03:58:33,311 - INFO - Test run finished
+2024-04-29 03:58:33,319 - INFO - Test run finished
+2024-04-29 03:58:33,321 - INFO - Test status: SKIPPED, Duration: 0.0001974339993466856
+2024-04-29 03:58:33,321 - INFO - db89147e-390e-40f3-8438-605e1f7a5abd SKIPPED
+2024-04-29 03:58:33,322 - INFO - Test status: SKIPPED, Duration: 0.0001974339993466856
+2024-04-29 03:58:33,327 - INFO - Started test: test_passing
+2024-04-29 03:58:33,327 - INFO - Test 'test_passing' started with params: {}
+2024-04-29 03:58:33,328 - INFO - Test status: PASSED, Duration: 0.00015139599963731598
+2024-04-29 03:58:33,328 - INFO - 235f5135-125c-42e1-8de4-c45392afabc1 PASSED
+2024-04-29 03:58:33,328 - INFO - Test status: PASSED, Duration: 0.00015139599963731598
+2024-04-29 03:58:33,336 - INFO - Started test: test_error
+2024-04-29 03:58:33,337 - INFO - Test 'test_error' started with params: {}
+2024-04-29 03:58:33,339 - INFO - Test status: PASSED, Duration: 0.0006607840005017351
+2024-04-29 03:58:33,339 - INFO - 55452cc0-7a9f-4988-9af1-136a7f5e2157 PASSED
+2024-04-29 03:58:33,340 - INFO - Test status: PASSED, Duration: 0.0006607840005017351
+2024-04-29 03:58:33,344 - INFO - Started test: test_examples[3.14-5.55]
+2024-04-29 03:58:33,345 - INFO - Test 'test_examples[3.14-5.55]' started with params: {'left': 3.14, 'right': 5.55}
+2024-04-29 03:58:33,346 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py', 5, 'Skipped: Skipped!')
+2024-04-29 03:58:33,347 - INFO - 987c64d8-d8dd-4771-b6bf-4b356423814a SKIPPED
+2024-04-29 03:58:33,347 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py', 5, 'Skipped: Skipped!')
+2024-04-29 03:58:33,352 - INFO - Started test: test_properties
+2024-04-29 03:58:33,352 - INFO - Test 'test_properties' started with params: {}
+2024-04-29 03:58:33,361 - INFO - Test run finished
+2024-04-29 03:58:33,370 - INFO - Test run finished
+2024-04-29 03:58:33,378 - INFO - Started test: test_examples[2-2]
+2024-04-29 03:58:33,378 - INFO - Test 'test_examples[2-2]' started with params: {'left': 2, 'right': 2}
+2024-04-29 03:58:33,380 - INFO - Test status: PASSED, Duration: 0.0003324030003568623
+2024-04-29 03:58:33,381 - INFO - 398a374a-d236-4bc2-9fee-e5ec5abf9afb PASSED
+2024-04-29 03:58:33,381 - INFO - Test status: PASSED, Duration: 0.0003324030003568623
+2024-04-29 03:58:33,387 - INFO - Test run finished
+2024-04-29 03:58:33,396 - INFO - Started test: test_skipped
+2024-04-29 03:58:33,396 - INFO - Test 'test_skipped' started with params: {}
+2024-04-29 03:58:33,397 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py', 10, 'Skipped: Test is skipped for a reason')
+2024-04-29 03:58:33,398 - INFO - f79aa8a3-cb31-42bb-9329-3aef04df6262 SKIPPED
+2024-04-29 03:58:33,398 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py', 10, 'Skipped: Test is skipped for a reason')
+2024-04-29 03:58:33,406 - INFO - Test run finished
+2024-04-29 03:58:33,414 - INFO - Started test: test_unexpected_failure
+2024-04-29 03:58:33,415 - INFO - Test 'test_unexpected_failure' started with params: {}
+2024-04-29 03:58:33,423 - INFO - Started test: test_examples[nan-42]
+2024-04-29 03:58:33,424 - INFO - Test 'test_examples[nan-42]' started with params: {'left': nan, 'right': 42}
+2024-04-29 03:58:33,431 - INFO - Test status: FAILED, Duration: 0.00044152699956612196
+2024-04-29 03:58:33,431 - INFO - 194372dd-8d96-42c8-914a-96a889b7e5fe FAILED
+2024-04-29 03:58:33,432 - INFO - Test status: FAILED, Duration: 0.00044152699956612196
+2024-04-29 03:58:33,434 - INFO - Test run finished
+2024-04-29 03:58:33,440 - INFO - Test status: FAILED, Duration: 0.0005872759993508225
+2024-04-29 03:58:33,440 - INFO - 681d8606-7ff9-4930-9b36-d7f0b0cc5a44 FAILED
+2024-04-29 03:58:33,441 - INFO - Test status: FAILED, Duration: 0.0005872759993508225
+2024-04-29 03:58:33,448 - INFO - Finished test: db89147e-390e-40f3-8438-605e1f7a5abd, Status: SKIPPED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py:17: assert False, Duration: 0.0001974339993466856
+2024-04-29 03:58:33,457 - INFO - Finished test: 235f5135-125c-42e1-8de4-c45392afabc1, Status: PASSED, Exception: None, Duration: 0.00015139599963731598
+2024-04-29 03:58:33,466 - INFO - Finished test: 55452cc0-7a9f-4988-9af1-136a7f5e2157, Status: PASSED, Exception: None, Duration: 0.0006607840005017351
+2024-04-29 03:58:33,474 - INFO - Finished test: 987c64d8-d8dd-4771-b6bf-4b356423814a, Status: SKIPPED, Exception: None, Duration: None
+2024-04-29 03:58:33,484 - INFO - Finished test: 398a374a-d236-4bc2-9fee-e5ec5abf9afb, Status: PASSED, Exception: None, Duration: 0.0003324030003568623
+2024-04-29 03:58:33,494 - INFO - Finished test: f79aa8a3-cb31-42bb-9329-3aef04df6262, Status: SKIPPED, Exception: None, Duration: None
+2024-04-29 03:58:33,502 - INFO - Finished test: 194372dd-8d96-42c8-914a-96a889b7e5fe, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py:20: assert False, Duration: 0.00044152699956612196
+2024-04-29 03:58:33,503 - INFO - Test status: FAILED, Duration: 0.00044152699956612196
+2024-04-29 03:58:33,514 - INFO - Finished test: 681d8606-7ff9-4930-9b36-d7f0b0cc5a44, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py:14: assert (nan + 42) == (42 + nan), Duration: 0.0005872759993508225
+2024-04-29 03:58:33,516 - INFO - Test status: FAILED, Duration: 0.0005872759993508225
+2024-04-29 03:58:33,523 - INFO - Test run finished
+2024-04-29 03:58:33,533 - INFO - Test run finished
+2024-04-29 03:58:33,544 - INFO - Test run finished
+2024-04-29 03:58:33,551 - INFO - Test run finished
+2024-04-29 03:58:33,560 - INFO - Test run finished
+2024-04-29 03:58:33,568 - INFO - Test run finished
+2024-04-29 03:58:33,576 - INFO - Test run finished
+2024-04-29 03:58:33,585 - INFO - Test run finished
+2024-04-29 03:58:33,600 - INFO - Test status: FAILED, Duration: 0.24674014000083844
+2024-04-29 03:58:33,601 - INFO - 84f55c7d-057a-49fa-b09a-8ab84014e8e2 FAILED
+2024-04-29 03:58:33,601 - INFO - Test status: FAILED, Duration: 0.24674014000083844
+2024-04-29 03:58:33,610 - INFO - Finished test: 84f55c7d-057a-49fa-b09a-8ab84014e8e2, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py:21: assert (0 + nan) == (nan + 0), Duration: 0.24674014000083844
+2024-04-29 03:58:33,614 - INFO - Test status: FAILED, Duration: 0.24674014000083844
+2024-04-29 03:58:33,649 - INFO - Test run finished
+2024-04-29 03:58:33,997 - INFO - Test status: FAILED, Duration: 0.00044152699956612196
+2024-04-29 03:58:33,997 - INFO - Test status: FAILED, Duration: 0.0005872759993508225
+2024-04-29 03:58:33,997 - INFO - Test status: FAILED, Duration: 0.24674014000083844
+2024-04-29 03:58:34,012 - INFO - Test run finished
+2024-04-29 04:01:47,591 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 04:01:47,609 - INFO - <Response [200]>
+2024-04-29 04:01:47,609 - INFO - e60946d6-ea62-4ae4-95df-d563ede35dd4
+2024-04-29 04:01:47,609 - INFO - Test run started
+2024-04-29 04:01:47,837 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 04:01:47,853 - INFO - <Response [200]>
+2024-04-29 04:01:47,853 - INFO - 1757ac8b-9c1a-47a2-b086-8a2d9a021ec5
+2024-04-29 04:01:47,854 - INFO - Test run started
+2024-04-29 04:01:47,882 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 04:01:47,897 - INFO - <Response [200]>
+2024-04-29 04:01:47,897 - INFO - 0f148f48-508a-47fd-a39c-e5d2e923d3f1
+2024-04-29 04:01:47,897 - INFO - Test run started
+2024-04-29 04:01:48,073 - INFO - Started test: test_skipped
+2024-04-29 04:01:48,073 - INFO - Test 'test_skipped' started with params: {}
+2024-04-29 04:01:48,074 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py', 10, 'Skipped: Test is skipped for a reason')
+2024-04-29 04:01:48,075 - INFO - 37487d30-6396-453f-8eea-67b6db23117a SKIPPED
+2024-04-29 04:01:48,076 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py', 10, 'Skipped: Test is skipped for a reason')
+2024-04-29 04:01:48,081 - INFO - Started test: test_passing
+2024-04-29 04:01:48,082 - INFO - Test 'test_passing' started with params: {}
+2024-04-29 04:01:48,084 - INFO - Test status: PASSED, Duration: 0.00036568500036082696
+2024-04-29 04:01:48,084 - INFO - e3145f52-6dfc-4be3-a017-017dd59e0f45 PASSED
+2024-04-29 04:01:48,085 - INFO - Test status: PASSED, Duration: 0.00036568500036082696
+2024-04-29 04:01:48,091 - INFO - Finished test: 37487d30-6396-453f-8eea-67b6db23117a, Status: SKIPPED, Exception: None, Duration: None
+2024-04-29 04:01:48,101 - INFO - Finished test: e3145f52-6dfc-4be3-a017-017dd59e0f45, Status: PASSED, Exception: None, Duration: 0.00036568500036082696
+2024-04-29 04:01:48,111 - INFO - Started test: test_expected_failure
+2024-04-29 04:01:48,112 - INFO - Test 'test_expected_failure' started with params: {}
+2024-04-29 04:01:48,121 - INFO - Started test: test_error
+2024-04-29 04:01:48,122 - INFO - Test 'test_error' started with params: {}
+2024-04-29 04:01:48,123 - INFO - Test status: PASSED, Duration: 0.00048162399980355985
+2024-04-29 04:01:48,123 - INFO - 56327674-5220-4d58-8625-e5780ee8b9f5 PASSED
+2024-04-29 04:01:48,124 - INFO - Test status: PASSED, Duration: 0.00048162399980355985
+2024-04-29 04:01:48,138 - INFO - Finished test: 56327674-5220-4d58-8625-e5780ee8b9f5, Status: PASSED, Exception: None, Duration: 0.00048162399980355985
+2024-04-29 04:01:48,139 - INFO - Test status: SKIPPED, Duration: 0.0005313359997671796
+2024-04-29 04:01:48,140 - INFO - e3136755-e658-4308-bd25-f84aa813ddea SKIPPED
+2024-04-29 04:01:48,141 - INFO - Test status: SKIPPED, Duration: 0.0005313359997671796
+2024-04-29 04:01:48,152 - INFO - Finished test: e3136755-e658-4308-bd25-f84aa813ddea, Status: SKIPPED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py:17: assert False, Duration: 0.0005313359997671796
+2024-04-29 04:01:48,159 - INFO - Started test: test_examples[2-2]
+2024-04-29 04:01:48,160 - INFO - Test 'test_examples[2-2]' started with params: {'left': 2, 'right': 2}
+2024-04-29 04:01:48,161 - INFO - Test status: PASSED, Duration: 0.0002876369999285089
+2024-04-29 04:01:48,161 - INFO - aed182bf-df69-4566-9314-51974ddfa92c PASSED
+2024-04-29 04:01:48,162 - INFO - Test status: PASSED, Duration: 0.0002876369999285089
+2024-04-29 04:01:48,171 - INFO - Started test: test_unexpected_failure
+2024-04-29 04:01:48,171 - INFO - Test 'test_unexpected_failure' started with params: {}
+2024-04-29 04:01:48,175 - INFO - Test status: FAILED, Duration: 0.0004377130007924279
+2024-04-29 04:01:48,176 - INFO - 98cdd807-645c-45d1-8a93-ff0d1a3f7a73 FAILED
+2024-04-29 04:01:48,177 - INFO - Test status: FAILED, Duration: 0.0004377130007924279
+2024-04-29 04:01:48,182 - INFO - Finished test: aed182bf-df69-4566-9314-51974ddfa92c, Status: PASSED, Exception: None, Duration: 0.0002876369999285089
+2024-04-29 04:01:48,191 - INFO - Finished test: 98cdd807-645c-45d1-8a93-ff0d1a3f7a73, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py:20: assert False, Duration: 0.0004377130007924279
+2024-04-29 04:01:48,199 - INFO - Started test: test_examples[3.14-5.55]
+2024-04-29 04:01:48,199 - INFO - Test 'test_examples[3.14-5.55]' started with params: {'left': 3.14, 'right': 5.55}
+2024-04-29 04:01:48,200 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py', 5, 'Skipped: Skipped!')
+2024-04-29 04:01:48,201 - INFO - cfad0f2b-daab-40bb-952a-886baf4e2252 SKIPPED
+2024-04-29 04:01:48,201 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py', 5, 'Skipped: Skipped!')
+2024-04-29 04:01:48,210 - INFO - Started test: test_examples[nan-42]
+2024-04-29 04:01:48,210 - INFO - Test 'test_examples[nan-42]' started with params: {'left': nan, 'right': 42}
+2024-04-29 04:01:48,214 - INFO - Test status: FAILED, Duration: 0.0005527150005946169
+2024-04-29 04:01:48,215 - INFO - e3eb4cda-9cb7-4161-9994-76a9b068a938 FAILED
+2024-04-29 04:01:48,216 - INFO - Test status: FAILED, Duration: 0.0005527150005946169
+2024-04-29 04:01:48,220 - INFO - Finished test: cfad0f2b-daab-40bb-952a-886baf4e2252, Status: SKIPPED, Exception: None, Duration: None
+2024-04-29 04:01:48,231 - INFO - Finished test: e3eb4cda-9cb7-4161-9994-76a9b068a938, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py:14: assert (nan + 42) == (42 + nan), Duration: 0.0005527150005946169
+2024-04-29 04:01:48,232 - INFO - Test status: FAILED, Duration: 0.0004377130007924279
+2024-04-29 04:01:48,232 - INFO - Test status: FAILED, Duration: 0.0005527150005946169
+2024-04-29 04:01:48,239 - INFO - Started test: test_properties
+2024-04-29 04:01:48,240 - INFO - Test 'test_properties' started with params: {}
+2024-04-29 04:01:48,250 - INFO - Test run finished
+2024-04-29 04:01:48,701 - INFO - Test status: FAILED, Duration: 0.458587692999572
+2024-04-29 04:01:48,702 - INFO - f34f88e5-7611-493a-b8e6-bb19e8ac946a FAILED
+2024-04-29 04:01:48,703 - INFO - Test status: FAILED, Duration: 0.458587692999572
+2024-04-29 04:01:48,718 - INFO - Finished test: f34f88e5-7611-493a-b8e6-bb19e8ac946a, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py:21: assert (0 + nan) == (nan + 0), Duration: 0.458587692999572
+2024-04-29 04:01:48,722 - INFO - Test status: FAILED, Duration: 0.458587692999572
+2024-04-29 04:01:48,737 - INFO - Test run finished
+2024-04-29 04:01:48,933 - INFO - Test status: FAILED, Duration: 0.0004377130007924279
+2024-04-29 04:01:48,934 - INFO - Test status: FAILED, Duration: 0.0005527150005946169
+2024-04-29 04:01:48,934 - INFO - Test status: FAILED, Duration: 0.458587692999572
+2024-04-29 04:01:48,949 - INFO - Test run finished
+2024-04-29 04:04:27,801 - INFO - Plugin initialized with API URL: , Auth Token: 
+2024-04-29 04:45:43,500 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 04:45:43,533 - INFO - <Response [200]>
+2024-04-29 04:45:43,533 - INFO - fef1f1dd-f32a-42a7-895c-d50e6d8de5a1
+2024-04-29 04:45:43,533 - INFO - Test run started
+2024-04-29 04:45:43,724 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 04:45:43,740 - INFO - <Response [200]>
+2024-04-29 04:45:43,740 - INFO - 69c91a3c-5cb2-4851-b9cb-f3259a8dbaf6
+2024-04-29 04:45:43,740 - INFO - Test run started
+2024-04-29 04:45:43,756 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 04:45:43,769 - INFO - <Response [200]>
+2024-04-29 04:45:43,769 - INFO - e4a810d2-8d78-452a-8cce-a9ab1ca02e0a
+2024-04-29 04:45:43,769 - INFO - Test run started
+2024-04-29 04:45:43,782 - INFO - Plugin initialized with API URL: http://127.0.0.1:8000, Auth Token: ********
+2024-04-29 04:45:43,794 - INFO - <Response [200]>
+2024-04-29 04:45:43,794 - INFO - 06fc92c8-aff9-4f89-b2ae-fed5bd5cb4ce
+2024-04-29 04:45:43,795 - INFO - Test run started
+2024-04-29 04:45:43,898 - INFO - Started test: test_unexpected_failure
+2024-04-29 04:45:43,899 - INFO - Test 'test_unexpected_failure' started with params: {}
+2024-04-29 04:45:43,907 - INFO - Started test: test_skipped
+2024-04-29 04:45:43,908 - INFO - Test 'test_skipped' started with params: {}
+2024-04-29 04:45:43,909 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py', 10, 'Skipped: Test is skipped for a reason')
+2024-04-29 04:45:43,909 - INFO - 11d3d027-ee1a-4a73-b56f-5a29d2833c28 SKIPPED
+2024-04-29 04:45:43,910 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py', 10, 'Skipped: Test is skipped for a reason')
+2024-04-29 04:45:43,915 - INFO - Started test: test_passing
+2024-04-29 04:45:43,916 - INFO - Test 'test_passing' started with params: {}
+2024-04-29 04:45:43,918 - INFO - Test status: FAILED, Duration: 0.0005563119993894361
+2024-04-29 04:45:43,918 - INFO - Test status: PASSED, Duration: 0.0004370259994175285
+2024-04-29 04:45:43,918 - INFO - 337fee0f-a9b5-45c1-9332-275333ead52c FAILED
+2024-04-29 04:45:43,918 - INFO - 7c035cec-d683-4a00-9b71-2d9ad77ceaea PASSED
+2024-04-29 04:45:43,919 - INFO - Test status: FAILED, Duration: 0.0005563119993894361
+2024-04-29 04:45:43,919 - INFO - Test status: PASSED, Duration: 0.0004370259994175285
+2024-04-29 04:45:43,927 - INFO - Finished test: 11d3d027-ee1a-4a73-b56f-5a29d2833c28, Status: SKIPPED, Exception: None, Duration: None
+2024-04-29 04:45:43,936 - INFO - Finished test: 337fee0f-a9b5-45c1-9332-275333ead52c, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py:20: assert False, Duration: 0.0005563119993894361
+2024-04-29 04:45:43,946 - INFO - Finished test: 7c035cec-d683-4a00-9b71-2d9ad77ceaea, Status: PASSED, Exception: None, Duration: 0.0004370259994175285
+2024-04-29 04:45:43,957 - INFO - Started test: test_expected_failure
+2024-04-29 04:45:43,957 - INFO - Test 'test_expected_failure' started with params: {}
+2024-04-29 04:45:43,967 - INFO - Started test: test_examples[2-2]
+2024-04-29 04:45:43,968 - INFO - Test 'test_examples[2-2]' started with params: {'left': 2, 'right': 2}
+2024-04-29 04:45:43,969 - INFO - Test status: PASSED, Duration: 0.0003155670001433464
+2024-04-29 04:45:43,970 - INFO - 5da6edc5-a11c-41f3-be85-c028a75ebd3c PASSED
+2024-04-29 04:45:43,970 - INFO - Test status: PASSED, Duration: 0.0003155670001433464
+2024-04-29 04:45:43,976 - INFO - Test status: SKIPPED, Duration: 0.0005293750000419095
+2024-04-29 04:45:43,976 - INFO - 01dfd00e-bb2c-4162-b26b-c1bb35ddb458 SKIPPED
+2024-04-29 04:45:43,977 - INFO - Test status: SKIPPED, Duration: 0.0005293750000419095
+2024-04-29 04:45:43,977 - INFO - Started test: test_error
+2024-04-29 04:45:43,978 - INFO - Test 'test_error' started with params: {}
+2024-04-29 04:45:43,979 - INFO - Test status: PASSED, Duration: 0.0005221459996391786
+2024-04-29 04:45:43,979 - INFO - 08e88f22-6427-4fd8-893d-a19204f8c31d PASSED
+2024-04-29 04:45:43,980 - INFO - Test status: PASSED, Duration: 0.0005221459996391786
+2024-04-29 04:45:43,990 - INFO - Finished test: 5da6edc5-a11c-41f3-be85-c028a75ebd3c, Status: PASSED, Exception: None, Duration: 0.0003155670001433464
+2024-04-29 04:45:44,000 - INFO - Finished test: 01dfd00e-bb2c-4162-b26b-c1bb35ddb458, Status: SKIPPED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_all_outcomes.py:17: assert False, Duration: 0.0005293750000419095
+2024-04-29 04:45:44,009 - INFO - Finished test: 08e88f22-6427-4fd8-893d-a19204f8c31d, Status: PASSED, Exception: None, Duration: 0.0005221459996391786
+2024-04-29 04:45:44,019 - INFO - Started test: test_examples[nan-42]
+2024-04-29 04:45:44,019 - INFO - Test 'test_examples[nan-42]' started with params: {'left': nan, 'right': 42}
+2024-04-29 04:45:44,024 - INFO - Test status: FAILED, Duration: 0.0006462960009230301
+2024-04-29 04:45:44,025 - INFO - 766e9553-24aa-425b-ad7b-63110829f57d FAILED
+2024-04-29 04:45:44,025 - INFO - Test status: FAILED, Duration: 0.0006462960009230301
+2024-04-29 04:45:44,027 - INFO - Started test: test_examples[3.14-5.55]
+2024-04-29 04:45:44,027 - INFO - Test 'test_examples[3.14-5.55]' started with params: {'left': 3.14, 'right': 5.55}
+2024-04-29 04:45:44,028 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py', 5, 'Skipped: Skipped!')
+2024-04-29 04:45:44,028 - INFO - db9569b7-1bc8-4440-a1f6-cb1b4d31ba5c SKIPPED
+2024-04-29 04:45:44,028 - INFO - Test skipped: ('/home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py', 5, 'Skipped: Skipped!')
+2024-04-29 04:45:44,035 - INFO - Started test: test_properties
+2024-04-29 04:45:44,035 - INFO - Test 'test_properties' started with params: {}
+2024-04-29 04:45:44,045 - INFO - Finished test: 766e9553-24aa-425b-ad7b-63110829f57d, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py:14: assert (nan + 42) == (42 + nan), Duration: 0.0006462960009230301
+2024-04-29 04:45:44,047 - INFO - Test status: FAILED, Duration: 0.0005563119993894361
+2024-04-29 04:45:44,047 - INFO - Test status: FAILED, Duration: 0.0006462960009230301
+2024-04-29 04:45:44,052 - INFO - Finished test: db9569b7-1bc8-4440-a1f6-cb1b4d31ba5c, Status: SKIPPED, Exception: None, Duration: None
+2024-04-29 04:45:44,064 - INFO - Test run finished
+2024-04-29 04:45:44,072 - INFO - Test run finished
+2024-04-29 04:45:44,269 - INFO - Test status: FAILED, Duration: 0.23226809900006629
+2024-04-29 04:45:44,270 - INFO - 5da68a4d-0b7f-4fc2-85d4-ca105b9f0a06 FAILED
+2024-04-29 04:45:44,270 - INFO - Test status: FAILED, Duration: 0.23226809900006629
+2024-04-29 04:45:44,283 - INFO - Finished test: 5da68a4d-0b7f-4fc2-85d4-ca105b9f0a06, Status: FAILED, Exception: /home/rosh/test/pytest-report-plugin/pytest_report_plugin/tests/test_plugin.py:21: assert (0 + nan) == (nan + 0), Duration: 0.23226809900006629
+2024-04-29 04:45:44,284 - INFO - Test status: FAILED, Duration: 0.23226809900006629
+2024-04-29 04:45:44,295 - INFO - Test run finished
+2024-04-29 04:45:44,417 - INFO - Test status: FAILED, Duration: 0.0005563119993894361
+2024-04-29 04:45:44,417 - INFO - Test status: FAILED, Duration: 0.0006462960009230301
+2024-04-29 04:45:44,417 - INFO - Test status: FAILED, Duration: 0.23226809900006629
+2024-04-29 04:45:44,429 - INFO - Test run finished

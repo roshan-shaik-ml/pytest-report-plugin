@@ -1,0 +1,19 @@
+2024-04-29 03:22:10,118 - http_logger - ERROR - HTTPException: 400: Missing required fields in request body
+2024-04-29 03:22:10,129 - http_logger - ERROR - HTTPException: 400: Missing required fields in request body
+2024-04-29 03:22:10,134 - http_logger - ERROR - HTTPException: 400: Missing required fields in request body
+2024-04-29 03:22:10,140 - http_logger - ERROR - HTTPException: 400: Missing required fields in request body
+2024-04-29 03:22:10,161 - http_logger - ERROR - HTTPException: 400: Missing required fields in request body
+2024-04-29 03:22:10,170 - http_logger - ERROR - HTTPException: 400: Missing required fields in request body
+2024-04-29 03:22:10,178 - http_logger - ERROR - HTTPException: 400: Missing required fields in request body
+2024-04-29 03:22:10,185 - http_logger - ERROR - HTTPException: 400: Missing required fields in request body
+2024-04-29 03:22:10,198 - http_logger - ERROR - HTTPException: 400: Missing required fields in request body
+2024-04-29 03:22:10,442 - http_logger - ERROR - HTTPException: 400: Missing required fields in request body
+2024-04-29 03:34:02,315 - http_logger - ERROR - HTTPException: 400: Missing required fields in request body
+2024-04-29 03:34:02,853 - http_logger - ERROR - HTTPException: 400: Missing required fields in request body
+2024-04-29 03:37:39,158 - http_logger - ERROR - HTTPException: 400: Missing required fields in request body
+2024-04-29 03:37:39,674 - http_logger - ERROR - HTTPException: 400: Missing required fields in request body
+2024-04-29 03:42:39,644 - http_logger - ERROR - HTTPException: 500: Internal Server Error
+2024-04-29 03:43:41,757 - http_logger - ERROR - HTTPException: 500: Internal Server Error
+2024-04-29 03:51:16,804 - http_logger - ERROR - HTTPException: 400: Missing required fields in request body
+2024-04-29 03:51:19,251 - http_logger - ERROR - HTTPException: 400: Missing required fields in request body
+2024-04-29 04:03:11,375 - http_logger - ERROR - HTTPException: 500: Internal Server Error

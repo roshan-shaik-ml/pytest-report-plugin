@@ -1,5 +1,5 @@
+import os
 import json
-import uuid
 import logging
 from datetime import datetime
 from Database import TestManager
@@ -39,7 +39,7 @@ action_logger = logging.getLogger('action_logger')
 action_logger.addHandler(action_handler)
 
 # Create SQLAlchemy session
-SQLALCHEMY_DATABASE_URL = "sqlite:///plugin_app.sqlite"
+SQLALCHEMY_DATABASE_URL = os.getenv("SQLALCHEMY_DATABASE_URL")
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 db = SessionLocal()
@@ -110,7 +110,7 @@ async def create_run(request_body: dict):
     - dict: OpenAPI specification.
     """
     try:
-        run_id = uuid.UUID(request_body.get('run_id'))
+        run_id = request_body.get('run_id')
         start_time = datetime.fromisoformat(request_body.get('start_time'))
         created_test_run = test_manager.create_test_run(test_run_id=run_id, start_time=start_time)
         action_logger.info(f"Test run created with ID: {run_id}")
@@ -186,7 +186,7 @@ async def finish_run(request_body: dict):
     - dict: OpenAPI specification.
     """
     try:
-        run_id = uuid.UUID(request_body.get("run_id"))
+        run_id = request_body.get("run_id")
         finish_time = datetime.fromisoformat(request_body.get("finish_time"))
         test_manager.finish_test_run(run_id, finish_time)
         action_logger.info(f"Test run finished with ID: {run_id}")
@@ -212,14 +212,14 @@ async def create_test(request_body: dict):
     - dict: OpenAPI specification.
     """
     try:
-        test_id = uuid.UUID(request_body.get("test_id"))
+        test_id = request_body.get("test_id")
         test_name = request_body.get("test_name")
         test_parameters = request_body.get("test_parameters")
         timestamp = request_body.get("timestamp")
         test_run_id = request_body.get("test_run_id")
 
         timestamp_formatted = datetime.fromisoformat(timestamp)
-        test_run_id = uuid.UUID(test_run_id)
+        test_run_id = test_run_id
         test_manager.create_test(test_id, test_name, test_parameters, timestamp_formatted, test_run_id)
         action_logger.info(f"Test created with ID: {test_id}")
     except Exception as e:
@@ -247,7 +247,7 @@ async def finish_test(request_body: dict):
     - dict: OpenAPI specification.
     """
     try:
-        test_id = uuid.UUID(request_body.get("test_id"))
+        test_id = request_body.get("test_id")
         test_status = request_body.get("test_status")
         error_exception = request_body.get("error_exception")
         duration = request_body.get("duration")

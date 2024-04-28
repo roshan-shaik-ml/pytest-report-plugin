@@ -1,0 +1,669 @@
+2024-04-29 03:22:10,113 - generic_logger - ERROR - Exception occurred while creating test
+Traceback (most recent call last):
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.InterfaceError: Error binding parameter 0 - probably unsupported type.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rosh/test/pytest-report-plugin/App/main.py", line 223, in create_test
+    test_manager.create_test(test_id, test_name, test_parameters, timestamp_formatted, test_run_id)
+  File "/home/rosh/test/pytest-report-plugin/App/Database.py", line 117, in create_test
+    raise e
+  File "/home/rosh/test/pytest-report-plugin/App/Database.py", line 110, in create_test
+    self.db.commit()
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1972, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1257, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1232, in _prepare_impl
+    self.session.flush()
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 4296, in flush
+    self._flush(objects)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 4432, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 4392, in _flush
+    flush_context.execute()
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 1048, in _emit_insert_statements
+    result = connection.execute(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1422, in execute
+    return meth(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 514, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1644, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1850, in _execute_context
+    return self._exec_single_context(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1990, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2357, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InterfaceError: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: INSERT INTO tests (test_id, test_name, test_status, duration, error_exception, test_parameters, timestamp, test_run_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: (UUID('c67ab890-0542-4c9b-99cd-82444e9ea41d'), 'test_passing', None, None, None, '{}', '2024-04-29 03:22:10.108196', UUID('f604c261-61f2-4de7-8374-c30212b7314a'))]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-04-29 03:22:10,129 - generic_logger - ERROR - Exception occurred while creating test
+Traceback (most recent call last):
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.InterfaceError: Error binding parameter 0 - probably unsupported type.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rosh/test/pytest-report-plugin/App/main.py", line 223, in create_test
+    test_manager.create_test(test_id, test_name, test_parameters, timestamp_formatted, test_run_id)
+  File "/home/rosh/test/pytest-report-plugin/App/Database.py", line 117, in create_test
+    raise e
+  File "/home/rosh/test/pytest-report-plugin/App/Database.py", line 110, in create_test
+    self.db.commit()
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1972, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1257, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1232, in _prepare_impl
+    self.session.flush()
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 4296, in flush
+    self._flush(objects)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 4432, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 4392, in _flush
+    flush_context.execute()
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 1048, in _emit_insert_statements
+    result = connection.execute(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1422, in execute
+    return meth(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 514, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1644, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1850, in _execute_context
+    return self._exec_single_context(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1990, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2357, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InterfaceError: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: INSERT INTO tests (test_id, test_name, test_status, duration, error_exception, test_parameters, timestamp, test_run_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: (UUID('6382091a-659f-48b3-81c0-9257e9fd510c'), 'test_error', None, None, None, '{}', '2024-04-29 03:22:10.127525', UUID('f604c261-61f2-4de7-8374-c30212b7314a'))]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-04-29 03:22:10,134 - generic_logger - ERROR - Exception occurred while creating test
+Traceback (most recent call last):
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.InterfaceError: Error binding parameter 0 - probably unsupported type.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rosh/test/pytest-report-plugin/App/main.py", line 223, in create_test
+    test_manager.create_test(test_id, test_name, test_parameters, timestamp_formatted, test_run_id)
+  File "/home/rosh/test/pytest-report-plugin/App/Database.py", line 117, in create_test
+    raise e
+  File "/home/rosh/test/pytest-report-plugin/App/Database.py", line 110, in create_test
+    self.db.commit()
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1972, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1257, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1232, in _prepare_impl
+    self.session.flush()
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 4296, in flush
+    self._flush(objects)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 4432, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 4392, in _flush
+    flush_context.execute()
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 1048, in _emit_insert_statements
+    result = connection.execute(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1422, in execute
+    return meth(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 514, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1644, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1850, in _execute_context
+    return self._exec_single_context(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1990, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2357, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InterfaceError: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: INSERT INTO tests (test_id, test_name, test_status, duration, error_exception, test_parameters, timestamp, test_run_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: (UUID('bec96fb0-4322-474d-b3b8-d28fe3d1fe72'), 'test_skipped', None, None, None, '{}', '2024-04-29 03:22:10.132979', UUID('f604c261-61f2-4de7-8374-c30212b7314a'))]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-04-29 03:22:10,139 - generic_logger - ERROR - Exception occurred while creating test
+Traceback (most recent call last):
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.InterfaceError: Error binding parameter 0 - probably unsupported type.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rosh/test/pytest-report-plugin/App/main.py", line 223, in create_test
+    test_manager.create_test(test_id, test_name, test_parameters, timestamp_formatted, test_run_id)
+  File "/home/rosh/test/pytest-report-plugin/App/Database.py", line 117, in create_test
+    raise e
+  File "/home/rosh/test/pytest-report-plugin/App/Database.py", line 110, in create_test
+    self.db.commit()
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1972, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1257, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1232, in _prepare_impl
+    self.session.flush()
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 4296, in flush
+    self._flush(objects)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 4432, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 4392, in _flush
+    flush_context.execute()
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 1048, in _emit_insert_statements
+    result = connection.execute(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1422, in execute
+    return meth(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 514, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1644, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1850, in _execute_context
+    return self._exec_single_context(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1990, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2357, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InterfaceError: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: INSERT INTO tests (test_id, test_name, test_status, duration, error_exception, test_parameters, timestamp, test_run_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: (UUID('caf82adf-2865-411e-80ef-42e81189f9fc'), 'test_expected_failure', None, None, None, '{}', '2024-04-29 03:22:10.138523', UUID('f604c261-61f2-4de7-8374-c30212b7314a'))]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-04-29 03:22:10,161 - generic_logger - ERROR - Exception occurred while creating test
+Traceback (most recent call last):
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.InterfaceError: Error binding parameter 0 - probably unsupported type.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rosh/test/pytest-report-plugin/App/main.py", line 223, in create_test
+    test_manager.create_test(test_id, test_name, test_parameters, timestamp_formatted, test_run_id)
+  File "/home/rosh/test/pytest-report-plugin/App/Database.py", line 117, in create_test
+    raise e
+  File "/home/rosh/test/pytest-report-plugin/App/Database.py", line 110, in create_test
+    self.db.commit()
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1972, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1257, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1232, in _prepare_impl
+    self.session.flush()
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 4296, in flush
+    self._flush(objects)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 4432, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 4392, in _flush
+    flush_context.execute()
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 1048, in _emit_insert_statements
+    result = connection.execute(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1422, in execute
+    return meth(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 514, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1644, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1850, in _execute_context
+    return self._exec_single_context(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1990, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2357, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InterfaceError: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: INSERT INTO tests (test_id, test_name, test_status, duration, error_exception, test_parameters, timestamp, test_run_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: (UUID('759ee4da-ce8d-4465-abee-03cfc8a0e098'), 'test_unexpected_failure', None, None, None, '{}', '2024-04-29 03:22:10.158765', UUID('f604c261-61f2-4de7-8374-c30212b7314a'))]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-04-29 03:22:10,170 - generic_logger - ERROR - Exception occurred while creating test
+Traceback (most recent call last):
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.InterfaceError: Error binding parameter 0 - probably unsupported type.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rosh/test/pytest-report-plugin/App/main.py", line 223, in create_test
+    test_manager.create_test(test_id, test_name, test_parameters, timestamp_formatted, test_run_id)
+  File "/home/rosh/test/pytest-report-plugin/App/Database.py", line 117, in create_test
+    raise e
+  File "/home/rosh/test/pytest-report-plugin/App/Database.py", line 110, in create_test
+    self.db.commit()
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1972, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1257, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1232, in _prepare_impl
+    self.session.flush()
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 4296, in flush
+    self._flush(objects)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 4432, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 4392, in _flush
+    flush_context.execute()
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 1048, in _emit_insert_statements
+    result = connection.execute(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1422, in execute
+    return meth(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 514, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1644, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1850, in _execute_context
+    return self._exec_single_context(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1990, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2357, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InterfaceError: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: INSERT INTO tests (test_id, test_name, test_status, duration, error_exception, test_parameters, timestamp, test_run_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: (UUID('36cc9a19-b05b-4ee7-817b-103f2afe081c'), 'test_examples[2-2]', None, None, None, '{"left": 2, "right": 2}', '2024-04-29 03:22:10.168170', UUID('f604c261-61f2-4de7-8374-c30212b7314a'))]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-04-29 03:22:10,177 - generic_logger - ERROR - Exception occurred while creating test
+Traceback (most recent call last):
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.InterfaceError: Error binding parameter 0 - probably unsupported type.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rosh/test/pytest-report-plugin/App/main.py", line 223, in create_test
+    test_manager.create_test(test_id, test_name, test_parameters, timestamp_formatted, test_run_id)
+  File "/home/rosh/test/pytest-report-plugin/App/Database.py", line 117, in create_test
+    raise e
+  File "/home/rosh/test/pytest-report-plugin/App/Database.py", line 110, in create_test
+    self.db.commit()
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1972, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1257, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1232, in _prepare_impl
+    self.session.flush()
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 4296, in flush
+    self._flush(objects)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 4432, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 4392, in _flush
+    flush_context.execute()
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 1048, in _emit_insert_statements
+    result = connection.execute(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1422, in execute
+    return meth(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 514, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1644, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1850, in _execute_context
+    return self._exec_single_context(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1990, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2357, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InterfaceError: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: INSERT INTO tests (test_id, test_name, test_status, duration, error_exception, test_parameters, timestamp, test_run_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: (UUID('ca7400e6-039b-4b8a-907b-59bfff9e5599'), 'test_examples[3.14-5.55]', None, None, None, '{"left": 3.14, "right": 5.55}', '2024-04-29 03:22:10.175447', UUID('f604c261-61f2-4de7-8374-c30212b7314a'))]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-04-29 03:22:10,185 - generic_logger - ERROR - Exception occurred while creating test
+Traceback (most recent call last):
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.InterfaceError: Error binding parameter 0 - probably unsupported type.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rosh/test/pytest-report-plugin/App/main.py", line 223, in create_test
+    test_manager.create_test(test_id, test_name, test_parameters, timestamp_formatted, test_run_id)
+  File "/home/rosh/test/pytest-report-plugin/App/Database.py", line 117, in create_test
+    raise e
+  File "/home/rosh/test/pytest-report-plugin/App/Database.py", line 110, in create_test
+    self.db.commit()
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1972, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1257, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1232, in _prepare_impl
+    self.session.flush()
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 4296, in flush
+    self._flush(objects)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 4432, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 4392, in _flush
+    flush_context.execute()
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 1048, in _emit_insert_statements
+    result = connection.execute(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1422, in execute
+    return meth(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 514, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1644, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1850, in _execute_context
+    return self._exec_single_context(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1990, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2357, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InterfaceError: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: INSERT INTO tests (test_id, test_name, test_status, duration, error_exception, test_parameters, timestamp, test_run_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: (UUID('ac2530e6-90cd-4d71-9623-92b123fcc727'), 'test_examples[nan-42]', None, None, None, '{"left": null, "right": 42}', '2024-04-29 03:22:10.183426', UUID('f604c261-61f2-4de7-8374-c30212b7314a'))]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-04-29 03:22:10,197 - generic_logger - ERROR - Exception occurred while creating test
+Traceback (most recent call last):
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.InterfaceError: Error binding parameter 0 - probably unsupported type.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rosh/test/pytest-report-plugin/App/main.py", line 223, in create_test
+    test_manager.create_test(test_id, test_name, test_parameters, timestamp_formatted, test_run_id)
+  File "/home/rosh/test/pytest-report-plugin/App/Database.py", line 117, in create_test
+    raise e
+  File "/home/rosh/test/pytest-report-plugin/App/Database.py", line 110, in create_test
+    self.db.commit()
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1972, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1257, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1232, in _prepare_impl
+    self.session.flush()
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 4296, in flush
+    self._flush(objects)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 4432, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 4392, in _flush
+    flush_context.execute()
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/persistence.py", line 1048, in _emit_insert_statements
+    result = connection.execute(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1422, in execute
+    return meth(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 514, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1644, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1850, in _execute_context
+    return self._exec_single_context(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1990, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2357, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InterfaceError: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: INSERT INTO tests (test_id, test_name, test_status, duration, error_exception, test_parameters, timestamp, test_run_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: (UUID('ae0be95a-d31d-4dd8-a865-0abde2d4d313'), 'test_properties', None, None, None, '{}', '2024-04-29 03:22:10.195172', UUID('f604c261-61f2-4de7-8374-c30212b7314a'))]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2024-04-29 03:22:10,442 - generic_logger - ERROR - Exception occurred while finishing test run
+Traceback (most recent call last):
+  File "/home/rosh/test/pytest-report-plugin/App/main.py", line 191, in finish_run
+    test_manager.finish_test_run(run_id, finish_time)
+  File "/home/rosh/test/pytest-report-plugin/App/Database.py", line 176, in finish_test_run
+    raise e
+  File "/home/rosh/test/pytest-report-plugin/App/Database.py", line 171, in finish_test_run
+    raise ValueError("Test run ID not found")
+ValueError: Test run ID not found
+2024-04-29 03:34:02,313 - generic_logger - ERROR - Exception occurred while creating test run
+Traceback (most recent call last):
+  File "/home/rosh/test/pytest-report-plugin/App/main.py", line 114, in create_run
+    created_test_run = test_manager.create_test_run(test_run_id=run_id, start_time=start_time)
+  File "/home/rosh/test/pytest-report-plugin/App/Database.py", line 91, in create_test_run
+    raise e
+  File "/home/rosh/test/pytest-report-plugin/App/Database.py", line 80, in create_test_run
+    self.db.begin()  # Begin a transaction
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1883, in begin
+    raise sa_exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: A transaction is already begun on this Session.
+2024-04-29 03:34:02,853 - generic_logger - ERROR - Exception occurred while finishing test run
+Traceback (most recent call last):
+  File "/home/rosh/test/pytest-report-plugin/App/main.py", line 190, in finish_run
+    test_manager.finish_test_run(run_id, finish_time)
+  File "/home/rosh/test/pytest-report-plugin/App/Database.py", line 176, in finish_test_run
+    raise e
+  File "/home/rosh/test/pytest-report-plugin/App/Database.py", line 171, in finish_test_run
+    raise ValueError("Test run ID not found")
+ValueError: Test run ID not found
+2024-04-29 03:37:39,156 - generic_logger - ERROR - Exception occurred while creating test run
+Traceback (most recent call last):
+  File "/home/rosh/test/pytest-report-plugin/App/main.py", line 114, in create_run
+    created_test_run = test_manager.create_test_run(test_run_id=run_id, start_time=start_time)
+  File "/home/rosh/test/pytest-report-plugin/App/Database.py", line 91, in create_test_run
+    raise e
+  File "/home/rosh/test/pytest-report-plugin/App/Database.py", line 80, in create_test_run
+    self.db.begin()  # Begin a transaction
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1883, in begin
+    raise sa_exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: A transaction is already begun on this Session.
+2024-04-29 03:37:39,674 - generic_logger - ERROR - Exception occurred while finishing test run
+Traceback (most recent call last):
+  File "/home/rosh/test/pytest-report-plugin/App/main.py", line 190, in finish_run
+    test_manager.finish_test_run(run_id, finish_time)
+  File "/home/rosh/test/pytest-report-plugin/App/Database.py", line 176, in finish_test_run
+    raise e
+  File "/home/rosh/test/pytest-report-plugin/App/Database.py", line 171, in finish_test_run
+    raise ValueError("Test run ID not found")
+ValueError: Test run ID not found
+2024-04-29 03:42:39,644 - generic_logger - ERROR - Exception occurred while retrieving tests for a run
+Traceback (most recent call last):
+  File "/home/rosh/test/pytest-report-plugin/App/main.py", line 144, in get_tests_for_run
+    raise HTTPException(status_code=404, detail="Tests not found for the specified run ID")
+fastapi.exceptions.HTTPException: 404: Tests not found for the specified run ID
+2024-04-29 03:43:41,757 - generic_logger - ERROR - Exception occurred while retrieving tests for a run
+Traceback (most recent call last):
+  File "/home/rosh/test/pytest-report-plugin/App/main.py", line 144, in get_tests_for_run
+    raise HTTPException(status_code=404, detail="Tests not found for the specified run ID")
+fastapi.exceptions.HTTPException: 404: Tests not found for the specified run ID
+2024-04-29 03:51:16,802 - generic_logger - ERROR - Exception occurred while creating test run
+Traceback (most recent call last):
+  File "/home/rosh/test/pytest-report-plugin/App/main.py", line 115, in create_run
+    created_test_run = test_manager.create_test_run(test_run_id=run_id, start_time=start_time)
+  File "/home/rosh/test/pytest-report-plugin/App/Database.py", line 91, in create_test_run
+    raise e
+  File "/home/rosh/test/pytest-report-plugin/App/Database.py", line 80, in create_test_run
+    self.db.begin()  # Begin a transaction
+  File "/home/rosh/test/pytest-report-plugin/venv/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1883, in begin
+    raise sa_exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: A transaction is already begun on this Session.
+2024-04-29 03:51:19,251 - generic_logger - ERROR - Exception occurred while finishing test run
+Traceback (most recent call last):
+  File "/home/rosh/test/pytest-report-plugin/App/main.py", line 191, in finish_run
+    test_manager.finish_test_run(run_id, finish_time)
+  File "/home/rosh/test/pytest-report-plugin/App/Database.py", line 176, in finish_test_run
+    raise e
+  File "/home/rosh/test/pytest-report-plugin/App/Database.py", line 171, in finish_test_run
+    raise ValueError("Test run ID not found")
+ValueError: Test run ID not found
+2024-04-29 04:03:11,374 - generic_logger - ERROR - Exception occurred while retrieving tests for a run
+Traceback (most recent call last):
+  File "/home/rosh/test/pytest-report-plugin/App/main.py", line 144, in get_tests_for_run
+    raise HTTPException(status_code=404, detail="Tests not found for the specified run ID")
+fastapi.exceptions.HTTPException: 404: Tests not found for the specified run ID

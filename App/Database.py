@@ -26,7 +26,7 @@ Dependencies:
 Note:
 - This module assumes the existence of a SetupDatabase module containing the database models and initialization logic.
 """
-
+import os
 import uuid
 import logging
 import subprocess
@@ -227,11 +227,6 @@ class TestManager:
         """
         try:
             logger.info(f"Getting tests by run ID: {run_id}")
-            try:
-                run_id = uuid.UUID(run_id)
-            except ValueError:
-                logger.warning("Invalid UUID format")
-                return None
             tests = self.db.query(Test).filter_by(test_run_id=run_id).all()
             return tests
         except SQLAlchemyError as e:
@@ -263,7 +258,7 @@ def reset_and_test_with_example():
     """
     Resets the database, creates example test runs and tests, and prints table information.
     """
-    SQLALCHEMY_DATABASE_URL = "sqlite:///plugin_app.sqlite"
+    SQLALCHEMY_DATABASE_URL = os.getenv('SQLALCHEMY_DATABASE_URL')
     subprocess.call("python3 SetupDatabase.py", shell=True)
 
     engine = create_engine(SQLALCHEMY_DATABASE_URL)
@@ -273,13 +268,13 @@ def reset_and_test_with_example():
     
     test_manager = TestManager(db)
 
-    test_run_id = uuid.uuid4()
+    test_run_id = str(uuid.uuid4())
     start_time = datetime.now()
     created_test_run = test_manager.create_test_run(test_run_id, start_time)
     print("Created Test Run:", created_test_run)
 
     for i in range(0, 4):
-        test_id = uuid.uuid4()
+        test_id = str(uuid.uuid4())
         test_name = "Example Test"
         test_parameters = {"param1": "value1", "param2": "value2"}
         test_status = "PASSED"
@@ -306,8 +301,8 @@ def reset_and_test_with_example():
 
     test_manager.print_tables()
 
-    test_manager.empty_table(Test)
-    test_manager.empty_table(TestRun)
+    # test_manager.empty_table(Test)
+    # test_manager.empty_table(TestRun)
 
     db.close()
 
