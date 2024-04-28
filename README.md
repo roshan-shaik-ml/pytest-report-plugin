@@ -1,5 +1,3 @@
-bash
-
 # pytest-report-plugin
 
 ## Description
