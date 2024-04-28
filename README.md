@@ -54,7 +54,7 @@ Before using pytest-report-plugin, ensure that you have set up the necessary com
 ```bash
 cd App
 uvicorn main:app
-    ```
+```
 
 Keep the FastAPI server running while testing the plugin to ensure seamless communication between the plugin and the FastAPI endpoints.
 
