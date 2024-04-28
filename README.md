@@ -27,7 +27,7 @@ Create and activate a virtual environment:
 
 ```bash
 python3 -m venv venv
-source venv/bin/activate      # On Unix or MacOS
+source venv/bin/activate      # On Linux or MacOS
 venv\Scripts\activate         # On Windows
 ```
 Then, install the required dependencies:
@@ -44,7 +44,7 @@ Before using pytest-report-plugin, ensure that you have set up the necessary com
 > This script needs to be executed only during the initial setup or whenever you want to reset the database.
 
 ```bash
-    python App/SetupDatabase.py
+python App/SetupDatabase.py
 ```
 
 2. **FastAPI App**: Navigate to the App folder and run the FastAPI application using uvicorn. This app handles the requests from the plugin. It's crucial for the server to be running in order for the plugin to successfully communicate and send data to the FastAPI endpoints.
