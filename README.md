@@ -64,6 +64,7 @@ Once you have set up the prerequisites by running these two files, you can then 
 pytest --reporting-enabled --reporting-api-url=<API_URL> --reporting-auth-token=<AUTH_TOKEN>
 ```
 
+### Example
 ```bash
 # For testing use the FastAPI App we have setup earlier
 pytest --reporting-enabled --reporting-api-url="http://127.0.0.1:8000" --reporting-auth-token="password"
