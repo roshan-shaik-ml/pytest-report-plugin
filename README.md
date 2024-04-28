@@ -43,9 +43,11 @@ Before using pytest-report-plugin, ensure that you have set up the necessary com
   ```bash
   python App/SetupDatabase.py
   ```
-- FastAPI App: In the same App folder, run the FastAPI application using uvicorn. This app is handles the request from the plugin. Run this in a seperate terminal.
+- FastAPI App: Navigate to App folder, run the FastAPI application using uvicorn. This app handles the requests from the plugin. It's crucial for the server to be running in order for the plugin to successfully communicate and send data to the FastAPI endpoints. Run this command in a separate terminal to ensure continuous operation.
+
   ```bash
-  uvicorn main:app --reload
+  cd App
+  uvicorn main:app
   ```
 
 Once you have set up the prerequisites by running these two files, you can then proceed to run the plugin with pytest by enabling it in your pytest configuration:
@@ -72,4 +74,3 @@ This project is licensed under the terms of the MIT license. For more details, r
 ## Credits
 
 This plugin was developed by [Shaik Faizan Roshan Ali](https://github.com/roshan-shaik-ml/). Feel free to modify and customize it according to your preferences and specific requirements.
-
