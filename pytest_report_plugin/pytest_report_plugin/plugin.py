@@ -55,7 +55,7 @@ class ReportPlugin:
 
         # check reporting enabled
         if self.enabled:
-
+            
             self.run_id = self.start_test_run()
             logger.info("Test run started")
         
@@ -69,60 +69,78 @@ class ReportPlugin:
         """
 
         # check reporting enabled
+        
         if self.enabled:
 
             test_name = item.name
-            test_params = dict()
+            test_parameters = dict()
             timestamp = datetime.now()
             # Check if the test item has parameters
             if hasattr(item, "callspec") and hasattr(item.callspec, "params"):
                  # Access the test parameters
-                test_params = item.callspec.params
+                test_parameters = item.callspec.params
 
-            self.test_id = self.start_test(test_name, test_params, timestamp, self.run_id)
-            logger.info(f"Test '{test_name}' started with params: {test_params}")
+            self.test_id = self.start_test(test_name, test_parameters, timestamp, self.run_id)
+            logger.info(f"Test '{test_name}' started with params: {test_parameters}")
 
         return None
     
+    @pytest.hookimpl(tryfirst=True)
+    def pytest_runtest_teardown(self, item):
+
+        logger.info(f"{self.test_id} {self.test_status}")
+        self.finish_test(self.test_id, self.test_status, self.error_exception, self.duration)
+
     def pytest_report_teststatus(self, report: Union[CollectReport, TestReport]):
         """
         Hook function called when reporting test status.
         Reports the status of each test.
+
+        xfailed error are currently reported as skipped
         """
         # reporting the test status
-        duration = None
-        test_status = None
-        error_exception = None
+        self.duration = None
+        self.test_status = "UNKNOWN"
+        self.error_exception = None
 
         if report.when == "call":
 
-            test_status = report.outcome
-            duration = report.duration
+            self.test_status = report.outcome.upper()
+            self.duration = report.duration
 
             if hasattr(report.longrepr, 'reprcrash'):
 
-                error_exception = str(report.longrepr.reprcrash) 
+                self.error_exception = str(report.longrepr.reprcrash) 
 
-            logger.info(f"Test status: {test_status}, Duration: {duration}")
-            self.finish_test(self.test_id, test_status, error_exception, duration)
+            logger.info(f"Test status: {self.test_status}, Duration: {self.duration}")
 
         if report.when == "setup" and report.outcome=="skipped":
 
-            test_status = report.outcome
-            logger.info(f"Test skipped: {report.longrepr}")
-            self.finish_test(self.test_id, test_status, error_exception, duration)    
+            self.test_status = report.outcome.upper()
+            logger.info(f"Test skipped: {report.longrepr}")  
 
     @pytest.hookimpl(tryfirst=True)
-    def pytest_sessionfinish(self):
+    def pytest_unconfigure(self, config):
         """
-        Hook function called at the end of the test session.
-        Finishes the test run if reporting is enabled.
+        Hook function called after the test run is complete.
+        Performs actions at the end of the test session.
         """
-
         if self.enabled:
-
+            # Perform actions if reporting is enabled
             self.finish_test_run(self.run_id)
-            logger.info("Test run finished")
+            logger.info("Test run finished")    
+
+    # @pytest.hookimpl(trylast=True)
+    # def pytest_sessionfinish(self):
+    #     """
+    #     Hook function called at the end of the test session.
+    #     Finishes the test run if reporting is enabled.
+    #     """
+
+    #     if self.enabled:
+
+    #         self.finish_test_run(self.run_id)
+    #         logger.info("Test run finished")
 
     def start_test_run(self) -> str:
         """
@@ -133,10 +151,12 @@ class ReportPlugin:
         """
          # Check if reporting is enabled
         if self.enabled:
+            
             # Generate a unique run ID
             run_id = str(uuid.uuid4())
             # Get the current time as the start time
             start_time = datetime.now()
+            
             # Prepare the data for the request
             data = {
                 "run_id": run_id,
@@ -149,9 +169,11 @@ class ReportPlugin:
                 headers={"Authorization": f"Bearer {self.auth_token}"},
                 json=data
             )
+            logger.info(start_test_run_response)
             # Return the ID of the started test run
+            logger.info(run_id)
             return run_id
-        # Return None if reporting is disabled
+        # Return None if    reporting is disabled
         return None
 
     def finish_test_run(self, run_id: str) -> None:
@@ -201,13 +223,13 @@ class ReportPlugin:
         else:
             return obj
         
-    def start_test(self, test_name:str, test_param:Dict[str, Any], timestamp: datetime, run_id: str) -> Union[str, None]:
+    def start_test(self, test_name:str, test_parameters:Dict[str, Any], timestamp: datetime, run_id: str) -> Union[str, None]:
         """
         Starts a new test with the given parameters and returns the test ID.
 
         Args:
             test_name (str): The name of the test.
-            test_param (Dict[str, Any]): The parameters of the test.
+            test_parameters (Dict[str, Any]): The parameters of the test.
             timestamp (datetime): The timestamp when the test started.
             run_id (str): The ID of the test run to which the test belongs.
 
@@ -219,13 +241,14 @@ class ReportPlugin:
             # Generate a unique test ID
             test_id = str(uuid.uuid4())
             # Replace NaN values in the test parameters with None
-            test_param = self.replace_nan(test_param)
+            print(test_parameters)
+            test_parameters = self.replace_nan(test_parameters)
             
             # Prepare the data to be sent in the request
             data = {
                 "test_id": test_id,
                 "test_name": test_name,
-                "test_param": test_param,
+                "test_parameters": test_parameters,
                 "timestamp": timestamp.isoformat(),
                 "test_run_id": run_id,
             }
