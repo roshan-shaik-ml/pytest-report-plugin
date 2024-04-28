@@ -40,16 +40,16 @@ pip install -r requirements.txt
 Before using pytest-report-plugin, ensure that you have set up the necessary components:
 
 1. **SetupDatabase.py**: Run this script located in the App folder to set up the SQLite database required for the plugin's functionality.
-   > [!NOTE]
-   > This script needs to be executed only during the initial setup or whenever you want to reset the database.
+> [!NOTE]
+> This script needs to be executed only during the initial setup or whenever you want to reset the database.
 
     ```bash
     python App/SetupDatabase.py
     ```
 
 2. **FastAPI App**: Navigate to the App folder and run the FastAPI application using uvicorn. This app handles the requests from the plugin. It's crucial for the server to be running in order for the plugin to successfully communicate and send data to the FastAPI endpoints.
-   > [!TIP]
-   > Run this command in a separate terminal to ensure continuous operation.
+> [!TIP]
+> Run this command in a separate terminal to ensure continuous operation.
 
     ```bash
     cd App
