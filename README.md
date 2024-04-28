@@ -59,6 +59,7 @@ DATABASE_NAME=your_database_name
 SQLALCHEMY_DATABASE_URL=mysql+pymysql://${DB_USER}:${PASSWORD}@localhost/${DATABASE_NAME}
 ```
 Replace your_database_username, your_database_password, and your_database_name with your actual database credentials.
+
 2. **SetupDatabase.py**: Run this script located in the App folder to set up the SQLite database required for the plugin's functionality.
 > [!NOTE]
 > This script needs to be executed only during the initial setup or whenever you want to reset the database.
