@@ -82,10 +82,11 @@ uvicorn main:app
 
 Keep the FastAPI server running while testing the plugin to ensure seamless communication between the plugin and the FastAPI endpoints.
 
+### Finally, Run The Tests.
+
 Once you have set up the prerequisites by running these two files, you can then proceed to run the plugin with pytest by enabling it in your pytest configuration:
 ```bash
 # Navigate to the pytest-report-plugin/pytest_report_plugin directory containing conftest.py, then execute pytest with reporting enabled
-cd ../pytest_report_plugin/
 pytest --reporting-enabled --reporting-api-url=<API_URL> --reporting-auth-token=<AUTH_TOKEN>
 ```
 
