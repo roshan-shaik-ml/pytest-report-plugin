@@ -51,6 +51,8 @@ Before using pytest-report-plugin, ensure that you have set up the necessary com
 # To navigate into App folder
 cd App
 ```
+
+
 ```plaintext
 # set the following variable in .env
 DB_USER=your_database_username
@@ -58,14 +60,15 @@ PASSWORD=your_database_password
 DATABASE_NAME=your_database_name
 SQLALCHEMY_DATABASE_URL=mysql+pymysql://${DB_USER}:${PASSWORD}@localhost/${DATABASE_NAME}
 ```
+
 Replace your_database_username, your_database_password, and your_database_name with your actual database credentials.
 
-2. **SetupDatabase.py**: Run this script located in the App folder to set up the SQLite database required for the plugin's functionality.
+
+2. **SetupDatabase.py**: Run this script located in the App folder to set up the MySQL database required for the plugin's functionality.
 > [!NOTE]
 > This script needs to be executed only during the initial setup or whenever you want to reset the database.
 
 ```bash
-cd App
 python SetupDatabase.py
 ```
 
