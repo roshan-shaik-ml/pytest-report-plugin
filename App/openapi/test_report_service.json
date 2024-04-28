@@ -1,0 +1,159 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Test Report Service",
+    "version": "1.0.0"
+  },
+  "security": [
+    {
+      "api_key": []
+    }
+  ],
+  "paths": {
+    "/runs/": {
+      "post": {
+        "summary": "Create a new test run",
+        "tags": [
+          "TestRuns"
+        ],
+        "operationId": "createRun",
+        "responses": {
+          "201": {
+            "description": "A new test run is created. Contains a unique `run_id`",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "run_id": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/runs/{run_id}/finish/": {
+      "post": {
+        "summary": "Finish a test run",
+        "tags": [
+          "TestRuns"
+        ],
+        "operationId": "finishRun",
+        "parameters": [
+          {
+            "name": "run_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "A test run has been successfully finished",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/tests/": {
+      "post": {
+        "summary": "Start a new test",
+        "tags": [
+          "Tests"
+        ],
+        "operationId": "startTest",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "A new test has been started. Contains a unique `test_id`",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "test_id": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/tests/{test_id}/finish/": {
+      "post": {
+        "summary": "Finish a test",
+        "tags": [
+          "Tests"
+        ],
+        "operationId": "finishTest",
+        "parameters": [
+          {
+            "name": "test_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASSED",
+                      "FAILED",
+                      "SKIPPED",
+                      "ERROR"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "204": {
+            "description": "A test has been successfully finished",
+            "content": {}
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "api_key": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    }
+  }
+}

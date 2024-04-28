@@ -1,0 +1,58 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+      "title": "Test Report Service",
+      "version": "1.0.0"
+    },
+    "security": [{ "api_key": [] }],
+    "paths": {
+      "/tests/{test_id}/finish/": {
+        "post": {
+          "summary": "Finish a test",
+          "tags": ["Tests"],
+          "operationId": "finishTest",
+          "parameters": [
+            {
+              "name": "test_id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "integer"
+              }
+            }
+          ],
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "enum": ["PASSED", "FAILED", "SKIPPED", "ERROR"]
+                    }
+                  },
+                  "required": ["status"]
+                }
+              }
+            }
+          },
+          "responses": {
+            "204": {
+              "description": "A test has been successfully finished",
+              "content": {}
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "securitySchemes": {
+        "api_key": {
+          "type": "http",
+          "scheme": "bearer"
+        }
+      }
+    }
+  }
+  
