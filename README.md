@@ -18,7 +18,7 @@ bash
 - [python3](https://www.python.org/downloads/)
 - [virtualenv](https://pypi.org/project/virtualenv/)
 - [git](https://git-scm.com/downloads)
-- MySQL (version: mysql  Ver 8.0.36-0ubuntu0.20.04.1 for Linux on x86_64 ((Ubuntu)))
+- MySQL (tested on version: mysql  Ver 8.0.36-0ubuntu0.20.04.1)
 > [!NOTE]
 > Make sure MySQL is installed and MySQL service is running.
 
@@ -46,7 +46,7 @@ pip install -r requirements.txt
 ## Usage
 
 Before using pytest-report-plugin, ensure that you have set up the necessary components:
-1. **Add database credentials**: Navigate into the App folder. In the .env file, set the following variables:
+1. **Add database credentials**: Navigate into the App folder. In the `.env file`, set the following variables:
 ```bash
 # To navigate into App folder
 cd App
@@ -61,10 +61,10 @@ DATABASE_NAME=your_database_name
 SQLALCHEMY_DATABASE_URL=mysql+pymysql://${DB_USER}:${PASSWORD}@localhost/${DATABASE_NAME}
 ```
 
-Replace your_database_username, your_database_password, and your_database_name with your actual database credentials.
+Replace `your_database_username`, `your_database_password`, and `your_database_name` with your actual database credentials.
 
 
-2. **SetupDatabase.py**: Run this script located in the App folder to set up the MySQL database required for the plugin's functionality.
+2. **SetupDatabase.py**: Run this script located in the `App` folder to set up the MySQL database required for the plugin's functionality.
 > [!NOTE]
 > This script needs to be executed only during the initial setup or whenever you want to reset the database.
 
@@ -72,7 +72,7 @@ Replace your_database_username, your_database_password, and your_database_name w
 python SetupDatabase.py
 ```
 
-3. **FastAPI App**: From within the App folder and run the FastAPI application using uvicorn. This app handles the requests from the plugin. It's crucial for the server to be running in order for the plugin to successfully communicate and send data to the FastAPI endpoints.
+3. **FastAPI App**: From within the `App` folder and run the FastAPI application using uvicorn. This app handles the requests from the plugin. It's crucial for the server to be running in order for the plugin to successfully communicate and send data to the FastAPI endpoints.
 > [!TIP]
 > Run this command in a separate terminal to ensure continuous operation.
 
@@ -91,21 +91,21 @@ pytest --reporting-enabled --reporting-api-url=<API_URL> --reporting-auth-token=
 ```
 
 ## Examples
-For testing use the FastAPI hosted url we have setup earlier
+For testing use the FastAPI hosted url(i.e [https://127.0.0.1:8000](https://127.0.0.1:8000) we have setup earlier
 ### Example 1 (Sequential Execution Testing)
 
 ```bash 
 pytest --reporting-enabled --reporting-api-url="http://127.0.0.1:8000" --reporting-auth-token="password"
 ```
 ### Example 2 (Parllel Execution Testing)
-You can change the -n flag based on the CPU count required. `-n auto` uses all the CPUs
+You can change the `-n cpu-count` flag based on the CPU count required. `-n auto` uses all the CPUs
 ```bash
 
 pytest --reporting-enabled --reporting-api-url="http://127.0.0.1:8000" --reporting-auth-token="password" -n 3
 ```
 ## Output
 
-After running the tests with pytest-report-plugin, you can access the following endpoints to view the output using a broswer:
+After running the tests with `pytest-report-plugin`, you can access the following endpoints to view the output using a broswer:
 
     full-report: Endpoint to view a comprehensive report of the all test runs execution.
     runs/run_id: Endpoint to view detailed information about a specific test run identified by run_id.
