@@ -20,7 +20,7 @@ bash
 - [git](https://git-scm.com/downloads)
 - MySQL (tested on version: mysql  Ver 8.0.36-0ubuntu0.20.04.1)
 > [!NOTE]
-> Make sure MySQL is installed and MySQL service is running.
+> Make sure MySQL is installed and MySQL service is up and running.
 
 ## Installation
 
