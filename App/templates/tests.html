@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Run Test {{ run_id }}</title>
+    <style>
+      body {
+        background-color: #f5f5f5;
+
+        color: #333;
+
+        font-family: "Courier New", Courier, monospace;
+        font-size: medium;
+        padding: 0 50px;
+
+        margin: 0;
+      }
+
+      header {
+        background-color: #ddd;
+
+        padding: 20px;
+
+        text-align: center;
+
+        margin-bottom: 20px;
+      }
+
+      h1 {
+        color: #333;
+
+        font-size: 36px;
+
+        margin: 0;
+      }
+
+      table {
+        border-collapse: collapse;
+
+        width: 100%;
+
+        margin: 0 auto;
+
+        max-width: 90%;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+
+        padding: 8px;
+
+        text-align: left;
+      }
+
+      th {
+        background-color: #ddd;
+      }
+
+      tr:nth-child(even) {
+        background-color: #eee;
+      }
+
+      .checkbox-container {
+        display: flex;
+
+        margin-bottom: 10px;
+      }
+
+      .checkbox-container label {
+        margin-right: 10px;
+      }
+
+      /* Added CSS for checkboxes and status colors */
+
+      /* Added CSS for status colors */
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Tests of run {{ run_id }}</h1>
+    </header>
+    <a href="/full-report">
+      <img
+        width="50"
+        height="50"
+        src="https://img.icons8.com/ios/50/graph-report.png"
+        alt="full-report"
+      /> </a
+    ><br />
+    <a href="/full-report"><span>Full Report</span></a>
+    <div class="checkbox-container">
+      <label><input type="checkbox" id="PASSED" checked /> Passed</label>
+      <label><input type="checkbox" id="FAILED" checked /> Failed</label>
+      <label><input type="checkbox" id="SKIPPED" checked /> Skipped</label>
+    </div>
+    <table id="test-table">
+      <thead>
+        <tr>
+          <th>Test ID</th>
+          <th>Test Name</th>
+          <th>Status</th>
+          <th>Duration</th>
+          <th>Error/Exception</th>
+          <th>Test Parameters</th>
+          <th>Timestamp</th>
+          <th>Test Run ID</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for test in tests %}
+        <tr>
+          <td>{{ test.test_id }}</td>
+          <td>{{ test.test_name }}</td>
+          <td>{{ test.test_status }}</td>
+          <!-- Apply lowercase class name -->
+          <td>{{ test.duration }}</td>
+          <td>{{ test.error_exception }}</td>
+          <td>{{ test.test_parameters }}</td>
+          <td>{{ test.timestamp }}</td>
+          <td>
+            <a href="/runs/{{ test.test_run_id }}">{{ test.test_run_id }}</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <script>
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+      const tableRows = document.querySelectorAll("#test-table tbody tr");
+      const checkboxStates = {};
+
+      checkboxes.forEach((checkbox) => {
+        checkboxStates[checkbox.id] = true; // Default state
+
+        checkbox.addEventListener("change", () => {
+          checkboxStates[checkbox.id] = checkbox.checked;
+
+          tableRows.forEach((row) => {
+            const status = row
+              .querySelector("td:nth-child(3)")
+              .textContent.toUpperCase();
+            if (!checkboxStates[status]) {
+              row.style.display = "none";
+            } else {
+              row.style.display = "";
+            }
+          });
+        });
+      });
+      window.addEventListener("DOMContentLoaded", (event) => {
+        checkboxes.forEach((checkbox) => {
+          checkbox.checked = true;
+        });
+      });
+    </script>
+  </body>
+</html>
