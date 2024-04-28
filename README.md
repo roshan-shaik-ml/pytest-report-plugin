@@ -91,7 +91,7 @@ pytest --reporting-enabled --reporting-api-url=<API_URL> --reporting-auth-token=
 ```
 
 ## Examples
-For testing use the FastAPI hosted url(i.e [https://127.0.0.1:8000](https://127.0.0.1:8000) we have setup earlier
+For testing use the FastAPI hosted url (i.e [https://127.0.0.1:8000](https://127.0.0.1:8000) we have setup earlier.
 ### Example 1 (Sequential Execution Testing)
 
 ```bash 
