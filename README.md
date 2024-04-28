@@ -44,28 +44,30 @@ Before using pytest-report-plugin, ensure that you have set up the necessary com
 > This script needs to be executed only during the initial setup or whenever you want to reset the database.
 
 ```bash
-python App/SetupDatabase.py
+cd App
+python SetupDatabase.py
 ```
 
-2. **FastAPI App**: Navigate to the App folder and run the FastAPI application using uvicorn. This app handles the requests from the plugin. It's crucial for the server to be running in order for the plugin to successfully communicate and send data to the FastAPI endpoints.
+2. **FastAPI App**: From within the App folder and run the FastAPI application using uvicorn. This app handles the requests from the plugin. It's crucial for the server to be running in order for the plugin to successfully communicate and send data to the FastAPI endpoints.
 > [!TIP]
 > Run this command in a separate terminal to ensure continuous operation.
 
 ```bash
-cd App
 uvicorn main:app
 ```
 
 Keep the FastAPI server running while testing the plugin to ensure seamless communication between the plugin and the FastAPI endpoints.
 
-
 Once you have set up the prerequisites by running these two files, you can then proceed to run the plugin with pytest by enabling it in your pytest configuration:
-
 ```bash
+# Navigate to the pytest-report-plugin/pytest_report_plugin directory containing conftest.py, then execute pytest with reporting enabled
 pytest --reporting-enabled --reporting-api-url=<API_URL> --reporting-auth-token=<AUTH_TOKEN>
 ```
 
-Replace <API_URL> and <AUTH_TOKEN> with the appropriate values for your API endpoint and authentication token.
+```bash
+# For testing use the FastAPI App we have setup earlier
+pytest --reporting-enabled --reporting-api-url="http://127.0.0.1:8000" --reporting-auth-token="password"
+```
 ## Output
 
 After running the tests with pytest-report-plugin, you can access the following endpoints to view the output using a broswer:
