@@ -12,6 +12,7 @@ Usage:
 
     The API URL and authentication token must be provided for reporting to work properly.
 """
+import time
 import uuid
 import pytest
 import logging
@@ -151,31 +152,51 @@ class ReportPlugin:
         Returns:
             str: The ID of the newly started test run.
         """
-         # Check if reporting is enabled
-        if self.enabled:
-            
-            # Generate a unique run ID
-            run_id = str(uuid.uuid4())
-            # Get the current time as the start time
-            start_time = datetime.now()
-            
-            # Prepare the data for the request
-            data = {
-                "run_id": run_id,
-                "start_time": start_time.isoformat()
-            }
-            # Send a POST request to start the test run
-            start_test_run_endpoint = f"{self.api_url}/runs"
-            start_test_run_response = requests.post(
-                start_test_run_endpoint,
-                headers={"Authorization": f"Bearer {self.auth_token}"},
-                json=data
-            )
-            logger.info(start_test_run_response)
-            # Return the ID of the started test run
-            logger.info(run_id)
-            return run_id
-        # Return None if    reporting is disabled
+        if not self.enabled:
+
+            return None
+        
+        max_retries = 3  # Maximum number of retry attempts
+        retry_delay = 5  # Delay between retry attempts (in seconds)
+        retry_count = 0
+        
+        while retry_count < max_retries:
+            try:
+                
+                # Generate a unique run ID
+                run_id = str(uuid.uuid4())
+                # Get the current time as the start time
+                start_time = datetime.now()
+                
+                # Prepare the data for the request
+                data = {
+                    "run_id": run_id,
+                    "start_time": start_time.isoformat()
+                }
+                # Send a POST request to start the test run
+                start_test_run_endpoint = f"{self.api_url}/runs"
+                start_test_run_response = requests.post(
+                    start_test_run_endpoint,
+                    headers={"Authorization": f"Bearer {self.auth_token}"},
+                    json=data
+                )
+                
+                # Check response status code
+                if start_test_run_response.status_code < 200 or start_test_run_response.status_code >= 300:
+                    raise RuntimeError(f"Failed to start test run: HTTP {start_test_run_response.status_code}")
+                
+                logger.info(start_test_run_response)
+                # Return the ID of the started test run
+                logger.info(run_id)
+                return run_id
+            except (requests.RequestException, RuntimeError) as e:
+                logger.error(f"Failed to start test run: {e}")
+                retry_count += 1
+                time.sleep(retry_delay)
+        
+        # If all retry attempts fail, set self.enabled to False
+        self.enabled = False
+        logger.error("Failed to start test run after multiple retries. Disabling reporting.")
         return None
 
     def finish_test_run(self, run_id: str) -> None:
