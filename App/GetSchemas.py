@@ -1,5 +1,8 @@
+import os
+from dotenv import load_dotenv
 from sqlalchemy import create_engine, inspect
 
+load_dotenv()
 def print_all_table_schemas(database_url):
     # Create an engine
     engine = create_engine(database_url)
@@ -27,5 +30,5 @@ def print_table_schema(engine, table_name):
         print(f"\tColumn: {column['name']}\tType: {column['type']}\tNullable: {column['nullable']}")
 
 # Example usage
-SQLALCHEMY_DATABASE_URL = "sqlite:///plugin_app.sqlite"
+SQLALCHEMY_DATABASE_URL = os.getenv('SQLALCHEMY_DATABASE_URL')
 print_all_table_schemas(SQLALCHEMY_DATABASE_URL)
