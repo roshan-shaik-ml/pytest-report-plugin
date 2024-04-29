@@ -12,7 +12,7 @@
 - Supports custom configuration options for reporting.
 - Detailed information about test execution.
 
-## Prerequisite
+## Prerequisites
 - [python3](https://www.python.org/downloads/)
 - [virtualenv](https://pypi.org/project/virtualenv/)
 - [git](https://git-scm.com/downloads)
