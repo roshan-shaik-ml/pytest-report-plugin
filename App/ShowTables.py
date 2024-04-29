@@ -1,13 +1,17 @@
+import os
+from dotenv import load_dotenv
 from SetupDatabase import Test
 from SetupDatabase import TestRun
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 
+load_dotenv()
 def main():
     
     Base = declarative_base()
     # Create SQLite database engine
-    engine = create_engine('sqlite:///plugin_app.sqlite')
+    url=os.getenv('SQLALCHEMY_DATABASE_URL')
+    engine = create_engine(url)
 
     # Create session
     Session = sessionmaker(bind=engine)
