@@ -111,7 +111,8 @@ After running the tests with `pytest-report-plugin`, you can access the followin
 ## Contributing
 
 Contributions to pytest-report-plugin are welcomed! For bug reports or feature requests, please open an issue. If you plan to contribute code, please follow the contribution guidelines.
-License
+
+## License
 
 This project is licensed under the terms of the MIT license. For more details, refer to the [LICENSE](https://github.com/roshan-shaik-ml/pytest-report-plugin/blob/main/LICENSE) file.
 
